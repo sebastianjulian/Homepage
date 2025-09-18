@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+
+{% block title %}About - {{ site_title }}{% endblock %}
+
+{% block content %}
+<div class="about-page" style="padding-top: 80px;">
+    <section class="section">
+        <div class="container">
+            <div class="page-header text-center">
+                <h1 class="page-title">About Me</h1>
+                <p class="page-description">Get to know more about my background, education, and journey.</p>
+            </div>
+
+            <div class="about-content grid grid-2" style="align-items: start; gap: var(--space-3xl);">
+                <!-- Personal Info -->
+                <div class="about-text">
+                    <div class="card">
+                        <h2>Hello, I'm Sebastian</h2>
+                        <p>{{ personal_info.description }}</p>
+                        
+                        <h3>Current Status</h3>
+                        <p>{{ personal_info.current_status }}</p>
+                        
+                        <h3>Interests & Hobbies</h3>
+                        <ul style="color: var(--text-secondary); line-height: 1.8;">
+                            <li>Astrophotography and stargazing</li>
+                            <li>Programming and software development</li>
+                            <li>Engineering projects and problem-solving</li>
+                            <li>Physics and scientific research</li>
+                            <li>[Placeholder for additional hobby]</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Education Timeline -->
+                <div class="education-timeline">
+                    <div class="card">
+                        <h2>Education Timeline</h2>
+                        <div class="timeline">
+                            {% for edu in personal_info.education %}
+                            <div class="timeline-item {{ edu.status }}">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>{{ edu.institution }}</h4>
+                                    <p class="timeline-degree">{{ edu.degree }}</p>
+                                    <span class="timeline-year">{{ edu.year }}</span>
+                                    <span class="timeline-status status-{{ edu.status }}">
+                                        {% if edu.status == 'completed' %}✓ Completed
+                                        {% elif edu.status == 'planned' %}📅 Planned
+                                        {% else %}{{ edu.status | title }}
+                                        {% endif %}
+                                    </span>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+.about-page {
+    min-height: calc(100vh - 80px);
+    background: var(--bg-secondary);
+}
+
+.page-header {
+    margin-bottom: var(--space-3xl);
+}
+
+.page-title {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-md);
+}
+
+.page-description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-content h2 {
+    color: var(--accent-primary);
+    margin-bottom: var(--space-lg);
+}
+
+.about-content h3 {
+    color: var(--text-primary);
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-md);
+}
+
+.timeline {
+    position: relative;
+    padding-left: var(--space-xl);
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent-primary), var(--accent-secondary));
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-lg);
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -26px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent-primary);
+    border: 3px solid var(--bg-card);
+}
+
+.timeline-item.completed .timeline-dot {
+    background: #2ecc71;
+}
+
+.timeline-item.planned .timeline-dot {
+    background: var(--accent-secondary);
+}
+
+.timeline-content h4 {
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    margin-bottom: var(--space-xs);
+}
+
+.timeline-degree {
+    color: var(--text-secondary);
+    margin-bottom: var(--space-sm);
+}
+
+.timeline-year {
+    color: var(--accent-primary);
+    font-weight: 600;
+    margin-right: var(--space-md);
+}
+
+.timeline-status {
+    font-size: 0.9rem;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+}
+
+.timeline-status.status-completed {
+    background: rgba(46, 204, 113, 0.2);
+    color: #2ecc71;
+}
+
+.timeline-status.status-planned {
+    background: rgba(243, 156, 18, 0.2);
+    color: #f39c12;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+}
+</style>
+{% endblock %}

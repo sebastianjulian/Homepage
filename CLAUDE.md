@@ -41,7 +41,7 @@
 
 ## PROJECT CONTEXT
 - Project: Sebastian Maierhofer Personal Homepage
-- Tech Stack: React + JavaScript + CSS3
+- Tech Stack: Flask + Python + HTML5 + CSS3 + JavaScript (converted from React)
 - Features: Space-themed dark design, multi-language, galleries, downloads
 - Contact: sebastian@maierhofers.net, Instagram: sebi_maierhofer
 
