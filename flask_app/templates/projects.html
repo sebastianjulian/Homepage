@@ -193,7 +193,8 @@
 .project-detailed-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    gap: var(--space-lg);
     margin-bottom: var(--space-md);
 }
 
@@ -202,6 +203,12 @@
     flex-wrap: wrap;
     gap: var(--space-xs);
     flex: 1;
+    align-items: flex-start;
+}
+
+.status-badge {
+    flex-shrink: 0;
+    align-self: flex-start;
 }
 
 .project-category-badge {
