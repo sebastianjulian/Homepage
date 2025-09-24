@@ -107,17 +107,57 @@
 
                             <p>{{ get_translation('chemistry_story_p7') }}</p>
                             {% elif project.id == 'cansat' %}
-                            <p>The CanSat project involves designing and building a satellite simulation system within the constraints of a standard soda can. This engineering challenge combines atmospheric science, electronics, and data analysis in a real-world aerospace context.</p>
-                            <p>Using Arduino microcontrollers and various sensors, the system collects atmospheric data during flight, including temperature, pressure, and altitude measurements. The project demonstrates practical application of engineering principles in space technology.</p>
+                            <h3>{{ get_translation('cansat_story_title') }}</h3>
+                            <p>{{ get_translation('cansat_story_p1') }}</p>
+
+                            <p>{{ get_translation('cansat_story_p2') }}</p>
+
+                            <p>{{ get_translation('cansat_story_p3') }}</p>
+
+                            <p>{{ get_translation('cansat_story_p4') }}</p>
+
+                            <p>{{ get_translation('cansat_story_p5') }}</p>
+
+                            <p>{{ get_translation('cansat_story_p6') }}</p>
                             {% elif project.id == 'triton' %}
-                            <p>Triton represents an advanced engineering project focused on innovative problem-solving and prototype development. This ongoing project combines computer-aided design, simulation, and practical implementation to address real-world engineering challenges.</p>
-                            <p>The project incorporates modern engineering methodologies, including iterative design processes, performance optimization, and comprehensive testing protocols. Each phase builds upon previous findings to refine and improve the overall solution.</p>
+                            <h3>{{ get_translation('triton_story_title') }}</h3>
+                            <p>{{ get_translation('triton_story_p1') }}</p>
+
+                            <h4>{{ get_translation('triton_story_theory_title') }}</h4>
+                            <p>{{ get_translation('triton_story_p2') }}</p>
+
+                            <h4>{{ get_translation('triton_story_programming_title') }}</h4>
+                            <p>{{ get_translation('triton_story_p3') }}</p>
+
+                            <p>{{ get_translation('triton_story_p4') }}</p>
+
+                            <h4>{{ get_translation('triton_story_design_title') }}</h4>
+                            <p>{{ get_translation('triton_story_p5') }}</p>
+
+                            <h4>{{ get_translation('triton_story_project_mgmt_title') }}</h4>
+                            <p>{{ get_translation('triton_story_p6') }}</p>
+
+                            <h4>{{ get_translation('triton_story_applications_title') }}</h4>
+                            <p>{{ get_translation('triton_story_p7') }}</p>
+
+                            <h4>{{ get_translation('triton_story_conclusion_title') }}</h4>
+                            <p>{{ get_translation('triton_story_p8') }}</p>
                             {% elif project.id == 'cs50-homepage' %}
-                            <p>This website serves as my final project for Harvard's CS50 course, demonstrating the complete development lifecycle from concept to deployment. The project showcases proficiency in full-stack web development using Flask, Python, and modern front-end technologies.</p>
-                            <p>The site features a space-themed design with responsive layouts, multi-language support, and interactive elements. It represents the culmination of skills learned throughout the CS50 curriculum, including database design, web security, and user experience optimization.</p>
+                            <h3>{{ get_translation('cs50_story_title') }}</h3>
+                            <p>{{ get_translation('cs50_story_p1') }}</p>
+
+                            <p>{{ get_translation('cs50_story_p2') }}</p>
+
+                            <p>{{ get_translation('cs50_story_p3') }}</p>
                             {% elif project.id == 'astrophotography' %}
-                            <p>Astrophotography combines my passion for astronomy with technical photography skills to capture deep-space objects and celestial phenomena. This ongoing project involves specialized equipment, image processing techniques, and long-exposure photography methods.</p>
-                            <p>The collection includes various types of astronomical objects, from planets and the moon to nebulae and star clusters. Each image requires careful planning, multiple exposures, and sophisticated post-processing to reveal the beauty of the cosmos.</p>
+                            <h3>{{ get_translation('astrophoto_story_title') }}</h3>
+                            <p>{{ get_translation('astrophoto_story_p1') }}</p>
+
+                            <p>{{ get_translation('astrophoto_story_p2') }}</p>
+
+                            <p>{{ get_translation('astrophoto_story_p3') }}</p>
+
+                            <p>{{ get_translation('astrophoto_story_p4') }}</p>
                             {% else %}
                             <p>{{ project.description }}</p>
                             <p>This project demonstrates proficiency in {{ project.tech | join(', ') }} and showcases practical application of modern development methodologies.</p>

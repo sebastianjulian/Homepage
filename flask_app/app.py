@@ -10,6 +10,7 @@ from translations import get_translation, get_supported_languages, TRANSLATIONS
 
 # Initialize Flask application
 app = Flask(__name__)
+app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 # Configuration
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev-secret-key-change-in-production')
