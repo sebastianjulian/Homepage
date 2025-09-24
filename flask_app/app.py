@@ -81,7 +81,7 @@ PROJECTS_DATA = [
 # Personal information
 PERSONAL_INFO = {
     'name': 'Sebastian Maierhofer',
-    'title': 'Technical Physics Student',
+    'title': '',
     'subtitle': 'Aspiring Engineer • Problem Solver',
     'description': 'Recent graduate from Schottengymnasium, currently completing Zivildienst before pursuing Technical Physics. Passionate about engineering, programming, and astrophotography.',
     'email': 'sebastian@maierhofers.net',
@@ -219,7 +219,7 @@ def inject_common_data():
     """Inject commonly used data into all templates"""
     return {
         'current_year': datetime.now().year,
-        'site_title': 'Sebastian Maierhofer - Technical Physics Student & Engineer'
+        'site_title': 'Sebastian Maierhofer'
     }
 
 if __name__ == '__main__':
