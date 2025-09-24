@@ -33,7 +33,7 @@ TRANSLATIONS = {
         'stargazing': 'Stargazing',
 
         # Footer
-        'footer_text': 'Built with Flask and passion for space.',
+        'footer_text': '',
 
         # Project Data
         'project_wiener_schuelerliga_title': 'Wiener Schülerliga',
@@ -110,7 +110,7 @@ Neben der Technik spielt der Sport eine große Rolle in meinem Leben: ob Radfahr
         'stargazing': 'Sterne beobachten',
 
         # Footer
-        'footer_text': 'Erstellt mit Flask und Leidenschaft für den Weltraum.',
+        'footer_text': '',
 
         # Project Data
         'project_wiener_schuelerliga_title': 'Wiener Schülerliga',
@@ -187,7 +187,7 @@ Outre la technologie, le sport joue un rôle majeur dans ma vie : que ce soit le
         'stargazing': 'Observer les étoiles',
 
         # Footer
-        'footer_text': 'Créé avec Flask et passion pour l\'espace.',
+        'footer_text': '',
 
         # Project Data
         'project_wiener_schuelerliga_title': 'Ligue scolaire viennoise',
