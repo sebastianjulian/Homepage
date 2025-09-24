@@ -51,11 +51,23 @@
                 <!-- Desktop Navigation -->
                 <nav class="desktop-nav">
                     {% for nav_item in navigation %}
-                    <a href="{{ url_for(nav_item.id) if nav_item.id != 'home' else url_for('home') }}" 
+                    <a href="{{ url_for(nav_item.id) if nav_item.id != 'home' else url_for('home') }}"
                        class="nav-item {{ 'active' if current_page == nav_item.id else '' }}">
                         {{ nav_item.label }}
                     </a>
                     {% endfor %}
+
+                    <!-- Language Selector -->
+                    <div class="language-selector">
+                        <button class="language-toggle" onclick="toggleLanguageDropdown()">
+                            {{ current_language.upper() }} ▼
+                        </button>
+                        <div class="language-dropdown" id="language-dropdown" style="display: none;">
+                            <a href="#" onclick="changeLanguage('de')" class="{{ 'active' if current_language == 'de' else '' }}">DE</a>
+                            <a href="#" onclick="changeLanguage('en')" class="{{ 'active' if current_language == 'en' else '' }}">EN</a>
+                            <a href="#" onclick="changeLanguage('fr')" class="{{ 'active' if current_language == 'fr' else '' }}">FR</a>
+                        </div>
+                    </div>
                 </nav>
 
                 <!-- Mobile Menu Button -->
@@ -69,11 +81,18 @@
             <!-- Mobile Navigation -->
             <nav class="mobile-nav" id="mobile-nav" style="display: none;">
                 {% for nav_item in navigation %}
-                <a href="{{ url_for(nav_item.id) if nav_item.id != 'home' else url_for('home') }}" 
+                <a href="{{ url_for(nav_item.id) if nav_item.id != 'home' else url_for('home') }}"
                    class="mobile-nav-item {{ 'active' if current_page == nav_item.id else '' }}">
                     {{ nav_item.label }}
                 </a>
                 {% endfor %}
+
+                <!-- Mobile Language Selector -->
+                <div class="mobile-language-selector">
+                    <a href="#" onclick="changeLanguage('de')" class="mobile-nav-item {{ 'active' if current_language == 'de' else '' }}">Deutsch</a>
+                    <a href="#" onclick="changeLanguage('en')" class="mobile-nav-item {{ 'active' if current_language == 'en' else '' }}">English</a>
+                    <a href="#" onclick="changeLanguage('fr')" class="mobile-nav-item {{ 'active' if current_language == 'fr' else '' }}">Français</a>
+                </div>
             </nav>
         </div>
     </header>
@@ -87,13 +106,48 @@
     <footer class="footer" style="background: var(--bg-secondary); padding: var(--space-xl) 0; text-align: center; border-top: 1px solid var(--border-color);">
         <div class="container">
             <p style="color: var(--text-secondary); margin: 0;">
-                © {{ current_year }} Sebastian Maierhofer. Built with Flask and passion for space.
+                © {{ current_year }} Sebastian Maierhofer. {{ get_translation('footer_text') }}
             </p>
         </div>
     </footer>
 
     <!-- JavaScript -->
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <!-- Language switching functionality -->
+    <script>
+    function toggleLanguageDropdown() {
+        const dropdown = document.getElementById('language-dropdown');
+        dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function changeLanguage(langCode) {
+        fetch('/set_language/' + langCode, {
+            method: 'GET',
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Reload the page to reflect language changes
+                window.location.reload();
+            }
+        })
+        .catch(error => {
+            console.error('Error changing language:', error);
+        });
+    }
+
+    // Close language dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+        const dropdown = document.getElementById('language-dropdown');
+        const toggle = document.querySelector('.language-toggle');
+
+        if (dropdown && toggle && !dropdown.contains(event.target) && !toggle.contains(event.target)) {
+            dropdown.style.display = 'none';
+        }
+    });
+    </script>
+
     {% block extra_js %}{% endblock %}
 </body>
 </html>

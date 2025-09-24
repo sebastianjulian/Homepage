@@ -7,27 +7,27 @@
     <section class="section">
         <div class="container">
             <div class="page-header text-center">
-                <h1 class="page-title">About Me</h1>
-                <p class="page-description">Get to know more about my background, education, and journey.</p>
+                <h1 class="page-title">{{ get_translation('about_me') }}</h1>
+                <p class="page-description">{{ get_translation('about_description') }}</p>
             </div>
 
             <div class="about-content grid grid-2" style="align-items: start; gap: var(--space-3xl);">
                 <!-- Personal Info -->
                 <div class="about-text">
                     <div class="card">
-                        <h2>Hello, I'm Sebastian</h2>
+                        <h2>{{ get_translation('hello_sebastian') }}</h2>
                         <p>{{ personal_info.description }}</p>
                         
-                        <h3>Current Status</h3>
+                        <h3>{{ get_translation('current_status_title') }}</h3>
                         <p>{{ personal_info.current_status }}</p>
                         
-                        <h3>Interests & Hobbies</h3>
+                        <h3>{{ get_translation('interests_hobbies') }}</h3>
                         <ul style="color: var(--text-secondary); line-height: 1.8;">
-                            <li>Astrophotography and stargazing</li>
-                            <li>Programming and software development</li>
-                            <li>Engineering projects and problem-solving</li>
-                            <li>Physics and scientific research</li>
-                            <li>[Placeholder for additional hobby]</li>
+                            <li>{{ get_translation('interest_astrophotography') }}</li>
+                            <li>{{ get_translation('interest_programming') }}</li>
+                            <li>{{ get_translation('interest_engineering') }}</li>
+                            <li>{{ get_translation('interest_physics') }}</li>
+                            <li>{{ get_translation('interest_additional') }}</li>
                         </ul>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
                 <!-- Education Timeline -->
                 <div class="education-timeline">
                     <div class="card">
-                        <h2>Education Timeline</h2>
+                        <h2>{{ get_translation('education_timeline') }}</h2>
                         <div class="timeline">
                             {% for edu in personal_info.education %}
                             <div class="timeline-item {{ edu.status }}">

@@ -9,18 +9,14 @@
                 <div class="hero-text">
                     <h1 class="hero-title fade-in">{{ personal_info.name }}</h1>
                     <p class="hero-description fade-in">
-                        Ich heiße Sebastian, habe vor Kurzem meine Matura abgeschlossen und leiste derzeit meinen Zivildienst. Im Anschluss beginne ich mein Studium der Technischen Physik, wo ich meine Begeisterung für Naturwissenschaft und Technik vertiefen möchte.
-                        <br><br>
-                        Schon während der Schulzeit habe ich mich mit Projekten wie dem Bau eines U-Boots, der Teilnahme am CanSat-Wettbewerb oder dem Programmieren eigener Websites beschäftigt. Das Tüfteln, Entwickeln und Verstehen von Zusammenhängen ist für mich nicht nur ein Hobby, sondern eine Leidenschaft. Auch die Astronomie fasziniert mich – der Blick in den Sternenhimmel eröffnet immer wieder neue Fragen und Ideen.
-                        <br><br>
-                        Neben der Technik spielt der Sport eine große Rolle in meinem Leben: ob Radfahren, Fußball, Tennis, Tischtennis, Volleyball, Skifahren, Wandern, Schwimmen oder Basketball – ich genieße die Bewegung und die Abwechslung in all ihren Facetten. Ich bin ständig auf der Suche nach neuen Herausforderungen, die ich mit Neugier und Einsatzbereitschaft angehe. Auf dieser Seite möchte ich einen Einblick in meine Projekte, Interessen und Ziele geben – vielleicht als Inspiration, vielleicht einfach nur, um mich besser kennenzulernen.
+                        {{ get_translation('hero_description') }}
                     </p>
                     <div class="hero-actions fade-in">
                         <a href="{{ url_for('contact') }}" class="btn btn-primary">
-                            Get in Touch
+                            {{ get_translation('get_in_touch') }}
                         </a>
                         <a href="#projects" class="btn btn-secondary" onclick="scrollToProjects(event)">
-                            View Projects
+                            {{ get_translation('view_projects') }}
                         </a>
                     </div>
                 </div>
@@ -40,9 +36,9 @@
     <section id="projects" class="projects-section section">
         <div class="container">
             <div class="section-header text-center">
-                <h2 class="section-title">Featured Projects</h2>
+                <h2 class="section-title">{{ get_translation('featured_projects') }}</h2>
                 <p class="section-description">
-                    A collection of my work spanning web development, engineering, competitions, and creative pursuits.
+                    {{ get_translation('projects_description') }}
                 </p>
             </div>
             
@@ -81,7 +77,7 @@
             
             <div class="projects-footer text-center">
                 <a href="{{ url_for('projects') }}" class="btn btn-secondary">
-                    View All Projects
+                    {{ get_translation('view_all_projects') }}
                 </a>
             </div>
         </div>
@@ -93,19 +89,19 @@
             <div class="stats-grid grid grid-4">
                 <div class="stat-item text-center fade-in">
                     <div class="stat-number">{{ personal_info.graduation_year }}</div>
-                    <div class="stat-label">Graduated</div>
+                    <div class="stat-label">{{ get_translation('graduated') }}</div>
                 </div>
                 <div class="stat-item text-center fade-in">
                     <div class="stat-number">{{ projects | length }}</div>
-                    <div class="stat-label">Major Projects</div>
+                    <div class="stat-label">{{ get_translation('major_projects') }}</div>
                 </div>
                 <div class="stat-item text-center fade-in">
                     <div class="stat-number">∞</div>
-                    <div class="stat-label">Learning</div>
+                    <div class="stat-label">{{ get_translation('learning') }}</div>
                 </div>
                 <div class="stat-item text-center fade-in">
                     <div class="stat-number">🌌</div>
-                    <div class="stat-label">Stargazing</div>
+                    <div class="stat-label">{{ get_translation('stargazing') }}</div>
                 </div>
             </div>
         </div>

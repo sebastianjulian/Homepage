@@ -191,6 +191,10 @@
   .logo-text {
     font-size: 1.2rem;
   }
+
+  .language-selector {
+    display: none; /* Hide desktop language selector on mobile */
+  }
 }
 
 /* Header scroll effect */
@@ -204,10 +208,90 @@
   transition: var(--transition-normal);
 }
 
+/* Language Selector Styles */
+.language-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.language-toggle {
+  background: none;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-family: var(--font-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  transition: var(--transition-normal);
+  min-width: 60px;
+}
+
+.language-toggle:hover {
+  color: var(--text-primary);
+  border-color: var(--accent-primary);
+  background: rgba(233, 69, 96, 0.1);
+}
+
+.language-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: var(--space-sm);
+  background: rgba(15, 15, 20, 0.98);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  z-index: 1000;
+  min-width: 80px;
+  animation: slideDown 0.2s ease;
+}
+
+.language-dropdown a {
+  display: block;
+  padding: var(--space-sm) var(--space-md);
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: var(--transition-normal);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.language-dropdown a:last-child {
+  border-bottom: none;
+}
+
+.language-dropdown a:hover {
+  color: var(--text-primary);
+  background: rgba(233, 69, 96, 0.1);
+}
+
+.language-dropdown a.active {
+  color: var(--accent-primary);
+  background: rgba(233, 69, 96, 0.2);
+}
+
+/* Mobile Language Selector */
+.mobile-language-selector {
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border-color);
+}
+
+.mobile-language-selector .mobile-nav-item {
+  font-size: 1rem;
+  padding: var(--space-sm) var(--space-md);
+}
+
 /* Focus styles for accessibility */
 .nav-item:focus,
 .mobile-nav-item:focus,
-.mobile-menu-btn:focus {
+.mobile-menu-btn:focus,
+.language-toggle:focus {
   outline: 2px solid var(--accent-primary);
   outline-offset: 2px;
 }

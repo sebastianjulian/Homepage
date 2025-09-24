@@ -3,9 +3,10 @@ Sebastian Maierhofer Homepage - Flask Application
 Professional homepage with space-themed design
 """
 
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, session
 import os
 from datetime import datetime
+from translations import get_translation, get_supported_languages, TRANSLATIONS
 
 # Initialize Flask application
 app = Flask(__name__)
@@ -13,6 +14,20 @@ app = Flask(__name__)
 # Configuration
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev-secret-key-change-in-production')
 app.config['DEBUG'] = os.environ.get('FLASK_ENV') == 'development'
+
+# Language configuration
+DEFAULT_LANGUAGE = 'de'  # Default to German as the original language
+
+def get_current_language():
+    """Get current language from session or default"""
+    return session.get('language', DEFAULT_LANGUAGE)
+
+def set_language(lang_code):
+    """Set language in session"""
+    if lang_code in get_supported_languages():
+        session['language'] = lang_code
+        return True
+    return False
 
 # Project data - same structure as React version
 PROJECTS_DATA = [
@@ -111,38 +126,42 @@ PERSONAL_INFO = {
     'graduation_year': 2025
 }
 
-# Navigation items
-NAVIGATION = [
-    {'id': 'home', 'label': 'Home', 'label_de': 'Startseite'},
-    {'id': 'about', 'label': 'About', 'label_de': 'Über mich'},
-    {'id': 'projects', 'label': 'Projects', 'label_de': 'Projekte'},
-    {'id': 'contact', 'label': 'Contact', 'label_de': 'Kontakt'},
-]
+def get_navigation(lang):
+    """Get navigation items with proper translations"""
+    return [
+        {'id': 'home', 'label': get_translation(lang, 'home')},
+        {'id': 'about', 'label': get_translation(lang, 'about')},
+        {'id': 'projects', 'label': get_translation(lang, 'projects')},
+        {'id': 'contact', 'label': get_translation(lang, 'contact')},
+    ]
 
 @app.route('/')
 def home():
     """Homepage route - displays hero section and project grid"""
-    return render_template('home.html', 
+    current_lang = get_current_language()
+    return render_template('home.html',
                          projects=PROJECTS_DATA,
                          personal_info=PERSONAL_INFO,
-                         navigation=NAVIGATION,
+                         navigation=get_navigation(current_lang),
                          current_page='home')
 
 @app.route('/about')
 def about():
     """About page route - personal background and timeline"""
+    current_lang = get_current_language()
     return render_template('about.html',
                          personal_info=PERSONAL_INFO,
-                         navigation=NAVIGATION,
+                         navigation=get_navigation(current_lang),
                          current_page='about')
 
 @app.route('/projects')
 def projects():
     """Projects page route - detailed project showcase"""
+    current_lang = get_current_language()
     return render_template('projects.html',
                          projects=PROJECTS_DATA,
                          personal_info=PERSONAL_INFO,
-                         navigation=NAVIGATION,
+                         navigation=get_navigation(current_lang),
                          current_page='projects')
 
 @app.route('/projects/<project_id>')
@@ -151,19 +170,21 @@ def project_detail(project_id):
     project = next((p for p in PROJECTS_DATA if p['id'] == project_id), None)
     if not project:
         return render_template('404.html'), 404
-    
+
+    current_lang = get_current_language()
     return render_template('project_detail.html',
                          project=project,
                          personal_info=PERSONAL_INFO,
-                         navigation=NAVIGATION,
+                         navigation=get_navigation(current_lang),
                          current_page='projects')
 
 @app.route('/contact')
 def contact():
     """Contact page route - contact information and form"""
+    current_lang = get_current_language()
     return render_template('contact.html',
                          personal_info=PERSONAL_INFO,
-                         navigation=NAVIGATION,
+                         navigation=get_navigation(current_lang),
                          current_page='contact')
 
 @app.route('/api/projects')
@@ -191,16 +212,18 @@ def api_contact():
 @app.errorhandler(404)
 def not_found(error):
     """404 error handler"""
+    current_lang = get_current_language()
     return render_template('404.html',
                          personal_info=PERSONAL_INFO,
-                         navigation=NAVIGATION), 404
+                         navigation=get_navigation(current_lang)), 404
 
 @app.errorhandler(500)
 def server_error(error):
     """500 error handler"""
+    current_lang = get_current_language()
     return render_template('500.html',
                          personal_info=PERSONAL_INFO,
-                         navigation=NAVIGATION), 500
+                         navigation=get_navigation(current_lang)), 500
 
 # Template filters for additional functionality
 @app.template_filter('status_class')
@@ -213,13 +236,27 @@ def year_current():
     """Get current year for copyright"""
     return datetime.now().year
 
+# Language switching route
+@app.route('/set_language/<lang_code>')
+def set_language_route(lang_code):
+    """Route to set language"""
+    if set_language(lang_code):
+        # Redirect back to the referring page or home
+        return jsonify({'success': True, 'language': lang_code})
+    return jsonify({'success': False, 'error': 'Invalid language code'}), 400
+
 # Context processor to make common data available to all templates
 @app.context_processor
 def inject_common_data():
     """Inject commonly used data into all templates"""
+    current_lang = get_current_language()
     return {
         'current_year': datetime.now().year,
-        'site_title': 'Sebastian Maierhofer'
+        'site_title': 'Sebastian Maierhofer',
+        'current_language': current_lang,
+        'supported_languages': get_supported_languages(),
+        'get_translation': lambda key, default=None: get_translation(current_lang, key, default),
+        'translations': TRANSLATIONS.get(current_lang, {})
     }
 
 if __name__ == '__main__':
