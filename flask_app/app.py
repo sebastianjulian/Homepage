@@ -20,8 +20,8 @@ DEFAULT_LANGUAGE = 'de'  # Default to German as the original language
 
 # Category definitions
 CATEGORIES = {
-    'content': ['Sports', 'Competition', 'Chemistry', 'Engineering', 'Physics', 'Programming', 'Project Management', 'Event Management', 'CAD', 'Astrophotography', 'Data Processing', 'Hobby'],
-    'status': ['Achievement', 'Education', 'Project']
+    'content': ['Sports', 'Competition', 'Chemistry', 'Engineering', 'Physics', 'Programming', 'Project Management', 'Event Management', 'CAD', 'Astrophotography', 'Data Processing'],
+    'status': ['Achievement', 'Education', 'Project', 'Hobby']
 }
 
 def get_current_language():
@@ -92,7 +92,7 @@ PROJECTS_DATA = [
         'title': 'Astrophotography',
         'description': 'Deep space imaging and astronomical photography collection.',
         'categories': ['Astrophotography', 'Hobby', 'Data Processing'],
-        'status': 'Achievement',
+        'status': 'Hobby',
         'tech': ['Telescope', 'Image Processing', 'Stacking', 'Event Management'],
         'github_url': None,
         'demo_url': None

@@ -220,29 +220,12 @@
   letter-spacing: 0.5px;
 }
 
-.status-completed {
-  background: rgba(46, 204, 113, 0.2);
-  color: #2ecc71;
-}
-
-.status-achievement {
+.status-achievement,
+.status-education,
+.status-project,
+.status-hobby {
   background: rgba(243, 156, 18, 0.2);
   color: #f39c12;
-}
-
-.status-in-progress {
-  background: rgba(52, 152, 219, 0.2);
-  color: #3498db;
-}
-
-.status-current {
-  background: rgba(233, 69, 96, 0.2);
-  color: var(--accent-primary);
-}
-
-.status-ongoing {
-  background: rgba(155, 89, 182, 0.2);
-  color: #9b59b6;
 }
 
 .project-title {

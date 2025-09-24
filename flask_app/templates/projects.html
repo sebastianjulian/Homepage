@@ -19,6 +19,7 @@
                 <button class="filter-btn" data-filter="Achievement">Achievement</button>
                 <button class="filter-btn" data-filter="Education">Education</button>
                 <button class="filter-btn" data-filter="Project">Project</button>
+                <button class="filter-btn" data-filter="Hobby">Hobby</button>
                 <button class="filter-btn" data-filter="Engineering">Engineering</button>
                 <button class="filter-btn" data-filter="Programming">Programming</button>
                 <button class="filter-btn" data-filter="Competition">Competition</button>
@@ -68,12 +69,6 @@
 
                         <h3 class="project-detailed-title">{{ project.title }}</h3>
                         <p class="project-detailed-description">{{ project.description }}</p>
-
-                        <div class="project-detailed-tech">
-                            {% for tech in project.tech %}
-                            <span class="tech-tag">{{ tech }}</span>
-                            {% endfor %}
-                        </div>
 
                         <div class="project-detailed-actions">
                             {% if project.github_url %}
@@ -231,12 +226,6 @@
     flex-grow: 1;
 }
 
-.project-detailed-tech {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-xs);
-    margin-bottom: var(--space-lg);
-}
 
 .project-detailed-actions {
     display: flex;
