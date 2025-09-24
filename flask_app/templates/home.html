@@ -15,15 +15,12 @@
                         <a href="{{ url_for('contact') }}" class="btn btn-primary">
                             {{ get_translation('get_in_touch') }}
                         </a>
-                        <a href="#projects" class="btn btn-secondary" onclick="scrollToProjects(event)">
-                            {{ get_translation('view_projects') }}
-                        </a>
                     </div>
                 </div>
                 <div class="hero-image">
                     <div class="image-container">
-                        <img src="{{ url_for('static', filename='images/Porträtfoto_Sebastian.jpg') }}" 
-                             alt="Sebastian Maierhofer - Professional Portrait" 
+                        <img src="{{ url_for('static', filename='images/Porträtfoto_Sebastian.jpg') }}"
+                             alt="Sebastian Maierhofer - Professional Portrait"
                              class="profile-photo">
                     </div>
                 </div>
@@ -31,91 +28,5 @@
         </div>
         <div class="hero-background"></div>
     </section>
-
-    <!-- Projects Grid Section -->
-    <section id="projects" class="projects-section section">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2 class="section-title">{{ get_translation('featured_projects') }}</h2>
-                <p class="section-description">
-                    {{ get_translation('projects_description') }}
-                </p>
-            </div>
-            
-            <div class="projects-grid grid grid-3">
-                {% for project in projects %}
-                <div class="project-card card fade-in" 
-                     style="animation-delay: {{ loop.index0 * 0.1 }}s"
-                     onclick="navigateToProject('{{ project.id }}')">
-                    
-                    <div class="project-header">
-                        <div class="project-status">
-                            <span class="status-badge status-{{ project.status | status_class }}">
-                                {{ project.status }}
-                            </span>
-                        </div>
-                        <div class="project-category">{{ project.category }}</div>
-                    </div>
-                    
-                    <h3 class="project-title">{{ project.title }}</h3>
-                    <p class="project-description">{{ project.description }}</p>
-                    
-                    <div class="project-tech">
-                        {% for tech in project.tech %}
-                        <span class="tech-tag">{{ tech }}</span>
-                        {% endfor %}
-                    </div>
-                    
-                    <div class="project-arrow">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                        </svg>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-            
-            <div class="projects-footer text-center">
-                <a href="{{ url_for('projects') }}" class="btn btn-secondary">
-                    {{ get_translation('view_all_projects') }}
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Quick Stats Section -->
-    <section class="stats-section section">
-        <div class="container">
-            <div class="stats-grid grid grid-4">
-                <div class="stat-item text-center fade-in">
-                    <div class="stat-number">{{ personal_info.graduation_year }}</div>
-                    <div class="stat-label">{{ get_translation('graduated') }}</div>
-                </div>
-                <div class="stat-item text-center fade-in">
-                    <div class="stat-number">{{ projects | length }}</div>
-                    <div class="stat-label">{{ get_translation('major_projects') }}</div>
-                </div>
-                <div class="stat-item text-center fade-in">
-                    <div class="stat-number">∞</div>
-                    <div class="stat-label">{{ get_translation('learning') }}</div>
-                </div>
-                <div class="stat-item text-center fade-in">
-                    <div class="stat-number">🌌</div>
-                    <div class="stat-label">{{ get_translation('stargazing') }}</div>
-                </div>
-            </div>
-        </div>
-    </section>
 </div>
-
-<script>
-function scrollToProjects(event) {
-    event.preventDefault();
-    document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
-}
-
-function navigateToProject(projectId) {
-    window.location.href = `/projects/${projectId}`;
-}
-</script>
 {% endblock %}
