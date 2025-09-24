@@ -1,0 +1,293 @@
+{% extends "base.html" %}
+
+{% block title %}{{ get_translation('gallery_title') }} - {{ super() }}{% endblock %}
+
+{% block extra_css %}
+<style>
+    .gallery-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: var(--space-xl) var(--space-lg);
+    }
+
+    .gallery-header {
+        text-align: center;
+        margin-bottom: var(--space-xl);
+    }
+
+    .gallery-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: var(--space-md);
+        background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .gallery-description {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--space-lg);
+        margin-bottom: var(--space-xl);
+    }
+
+    .gallery-item {
+        position: relative;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border-color);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .gallery-item:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 40px rgba(233, 69, 96, 0.15);
+        border-color: var(--accent-primary);
+    }
+
+    .gallery-image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover .gallery-image {
+        transform: scale(1.05);
+    }
+
+    .gallery-info {
+        padding: var(--space-md);
+    }
+
+    .gallery-item-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: var(--space-sm);
+        color: var(--text-primary);
+    }
+
+    .gallery-item-description {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        line-height: 1.5;
+        margin-bottom: var(--space-sm);
+    }
+
+    .gallery-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+        font-size: 0.8rem;
+        color: var(--text-muted);
+    }
+
+    .meta-item {
+        background: var(--bg-tertiary);
+        padding: 2px 8px;
+        border-radius: 12px;
+        border: 1px solid var(--border-color);
+    }
+
+    .back-button {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-sm);
+        padding: var(--space-sm) var(--space-md);
+        background: var(--bg-secondary);
+        color: var(--text-primary);
+        text-decoration: none;
+        border-radius: var(--border-radius);
+        border: 1px solid var(--border-color);
+        transition: all 0.3s ease;
+        margin-bottom: var(--space-lg);
+    }
+
+    .back-button:hover {
+        background: var(--accent-primary);
+        color: white;
+        border-color: var(--accent-primary);
+        text-decoration: none;
+    }
+
+    .no-images {
+        text-align: center;
+        padding: var(--space-xxl);
+        color: var(--text-secondary);
+    }
+
+    .no-images-icon {
+        font-size: 4rem;
+        margin-bottom: var(--space-lg);
+        opacity: 0.5;
+    }
+
+    /* Modal for full-size viewing */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        padding-top: 50px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 90%;
+        max-width: 1200px;
+        max-height: 80%;
+        object-fit: contain;
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .modal-close:hover {
+        color: var(--accent-primary);
+    }
+
+    .modal-caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+    }
+
+    @media (max-width: 768px) {
+        .gallery-container {
+            padding: var(--space-lg) var(--space-md);
+        }
+
+        .gallery-title {
+            font-size: 2rem;
+        }
+
+        .gallery-grid {
+            grid-template-columns: 1fr;
+            gap: var(--space-md);
+        }
+
+        .modal-content {
+            width: 95%;
+            padding-top: 20px;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="gallery-container">
+    <a href="{{ url_for('project_detail', project_id='astrophotography') }}" class="back-button">
+        ← {{ get_translation('back_to_project') }}
+    </a>
+
+    <div class="gallery-header">
+        <h1 class="gallery-title">{{ get_translation('gallery_title') }}</h1>
+        <p class="gallery-description">
+            {{ get_translation('gallery_description') }}
+        </p>
+    </div>
+
+    {% if images %}
+    <div class="gallery-grid">
+        {% for image in images %}
+        <div class="gallery-item" onclick="openModal('{{ image.filename }}', '{{ image.title }}', '{{ image.description }}')">
+            <img src="{{ url_for('static', filename='images/astrophotography/' + image.filename) }}"
+                 alt="{{ image.title }}"
+                 class="gallery-image">
+            <div class="gallery-info">
+                <h3 class="gallery-item-title">{{ image.title }}</h3>
+                <p class="gallery-item-description">{{ image.description }}</p>
+                <div class="gallery-meta">
+                    {% if image.date %}
+                    <span class="meta-item">{{ image.date }}</span>
+                    {% endif %}
+                    {% if image.equipment %}
+                    <span class="meta-item">{{ image.equipment }}</span>
+                    {% endif %}
+                    {% if image.exposure %}
+                    <span class="meta-item">{{ image.exposure }}</span>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="no-images">
+        <div class="no-images-icon">🌌</div>
+        <h3>{{ get_translation('gallery_coming_soon') }}</h3>
+        <p>{{ get_translation('gallery_coming_soon_description') }}</p>
+    </div>
+    {% endif %}
+</div>
+
+<!-- Modal for full-size image viewing -->
+<div id="imageModal" class="modal">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div class="modal-caption" id="modalCaption"></div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function openModal(filename, title, description) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const modalCaption = document.getElementById('modalCaption');
+
+    modal.style.display = 'block';
+    modalImg.src = '{{ url_for("static", filename="images/astrophotography/") }}' + filename;
+    modalCaption.innerHTML = '<h4>' + title + '</h4><p>' + description + '</p>';
+}
+
+function closeModal() {
+    document.getElementById('imageModal').style.display = 'none';
+}
+
+// Close modal when clicking outside the image
+window.onclick = function(event) {
+    const modal = document.getElementById('imageModal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeModal();
+    }
+});
+</script>
+{% endblock %}

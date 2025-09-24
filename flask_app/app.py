@@ -185,6 +185,46 @@ def project_detail(project_id):
                          navigation=get_navigation(current_lang),
                          current_page='projects')
 
+@app.route('/projects/astrophotography/gallery')
+def astrophotography_gallery():
+    """Astrophotography gallery page"""
+    current_lang = get_current_language()
+
+    # Sample astrophotography images data
+    # In a real implementation, this would come from a database or file system scan
+    images = [
+        {
+            'filename': 'sample1.jpg',
+            'title': get_translation('sample_image_1_title', current_lang),
+            'description': get_translation('sample_image_1_desc', current_lang),
+            'date': '2024-01-15',
+            'equipment': 'Telescope + Canon EOS',
+            'exposure': '120s'
+        },
+        {
+            'filename': 'sample2.jpg',
+            'title': get_translation('sample_image_2_title', current_lang),
+            'description': get_translation('sample_image_2_desc', current_lang),
+            'date': '2024-02-20',
+            'equipment': 'Refractor 80mm',
+            'exposure': '300s'
+        }
+    ]
+
+    # Filter out images that don't exist
+    import os
+    existing_images = []
+    for image in images:
+        image_path = os.path.join(app.static_folder, 'images', 'astrophotography', image['filename'])
+        if os.path.exists(image_path):
+            existing_images.append(image)
+
+    return render_template('astrophotography_gallery.html',
+                         images=existing_images,
+                         personal_info=PERSONAL_INFO,
+                         navigation=get_navigation(current_lang),
+                         current_page='projects')
+
 @app.route('/contact')
 def contact():
     """Contact page route - contact information and form"""

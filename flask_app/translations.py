@@ -139,6 +139,18 @@ TRANSLATIONS = {
         'astrophoto_story_p2': 'Since astrophotography increasingly captivated me, I began to deal more intensively with the theoretical side and decided to upgrade my equipment step by step. First came a smaller telescope with compact camera to improve tracking through so-called guiding. Later followed a precise focuser and finally a cooled astro camera that also enables long exposures.',
         'astrophoto_story_p3': 'Despite these extensions, it became apparent that the mount reached its limits in terms of precision and that computer control still had optimization potential. But by now everything was available to build a fully automated telescope system.',
         'astrophoto_story_p4': 'Today my hobby encompasses the entire spectrum of sky photography: from planetary shots through images of the sun and moon to impressive deep-sky photos – galaxies, nebulae, star clusters, or even large-scale Milky Way landscapes. The journey from a simple beginner telescope to a complex system shows me that astrophotography requires not only technology, but above all passion, patience, and curiosity – and that\'s exactly what makes the appeal of this hobby for me.',
+
+        # Gallery translations
+        'view_gallery': 'View Gallery',
+        'gallery_title': 'Astrophotography Gallery',
+        'gallery_description': 'Explore my collection of astronomical images captured over the years, from planets and the moon to deep-sky objects like galaxies and nebulae.',
+        'gallery_coming_soon': 'Gallery Coming Soon',
+        'gallery_coming_soon_description': 'I\'m currently preparing my astrophotography collection for display. Please check back soon to see my astronomical images!',
+        'back_to_project': 'Back to Project',
+        'sample_image_1_title': 'Orion Nebula',
+        'sample_image_1_desc': 'The Orion Nebula (M42) captured with long exposure techniques.',
+        'sample_image_2_title': 'Saturn',
+        'sample_image_2_desc': 'Detailed view of Saturn showing its ring system.',
     },
 
     'de': {
@@ -276,6 +288,18 @@ Neben der Technik spielt der Sport eine große Rolle in meinem Leben: ob Radfahr
         'astrophoto_story_p2': 'Da mich die Astrofotografie zunehmend fesselte, begann ich mich intensiver mit der theoretischen Seite zu beschäftigen und beschloss, meine Ausrüstung Schritt für Schritt aufzurüsten. Zunächst kam ein kleineres Teleskop mit kompakter Kamera hinzu, um die Nachführung durch sogenanntes Guiding zu verbessern. Später folgten ein präziser Fokussierer und schließlich eine gekühlte Astrokamera, die auch Langzeitbelichtungen ermöglicht.',
         'astrophoto_story_p3': 'Trotz dieser Erweiterungen zeigte sich, dass die Montierung in puncto Genauigkeit an ihre Grenzen stieß und auch die Steuerung per Computer noch Optimierungspotenzial hatte. Doch mittlerweile war alles vorhanden, um ein vollständig automatisiertes Teleskopsystem aufzubauen.',
         'astrophoto_story_p4': 'Heute umfasst mein Hobby das gesamte Spektrum der Himmelsfotografie: von Planetenaufnahmen über Bilder der Sonne und des Mondes bis hin zu beeindruckenden Deep-Sky-Fotos – Galaxien, Nebel, Sternhaufen oder sogar großflächige Milchstraßen-Landschaften. Die Reise von einem einfachen Einsteigerteleskop bis hin zu einem komplexen System zeigt mir, dass Astrofotografie nicht nur Technik, sondern vor allem Leidenschaft, Geduld und Neugier erfordert – und genau das macht den Reiz dieses Hobbys für mich aus.',
+
+        # Gallery translations
+        'view_gallery': 'Galerie ansehen',
+        'gallery_title': 'Astrofotografie-Galerie',
+        'gallery_description': 'Entdecken Sie meine Sammlung astronomischer Bilder, die über die Jahre entstanden sind, von Planeten und dem Mond bis hin zu Deep-Sky-Objekten wie Galaxien und Nebeln.',
+        'gallery_coming_soon': 'Galerie folgt bald',
+        'gallery_coming_soon_description': 'Ich bereite gerade meine Astrofotografie-Sammlung zur Anzeige vor. Schauen Sie bald wieder vorbei, um meine astronomischen Bilder zu sehen!',
+        'back_to_project': 'Zurück zum Projekt',
+        'sample_image_1_title': 'Orionnebel',
+        'sample_image_1_desc': 'Der Orionnebel (M42) aufgenommen mit Langzeittechnik.',
+        'sample_image_2_title': 'Saturn',
+        'sample_image_2_desc': 'Detaillierte Aufnahme des Saturn mit seinem Ringsystem.',
     },
 
     'fr': {
@@ -413,6 +437,18 @@ Outre la technologie, le sport joue un rôle majeur dans ma vie : que ce soit le
         'astrophoto_story_p2': 'Comme l\'astrophotographie me captivait de plus en plus, j\'ai commencé à m\'occuper plus intensément du côté théorique et j\'ai décidé d\'améliorer mon équipement étape par étape. D\'abord est venu un télescope plus petit avec caméra compacte pour améliorer le suivi à travers ce qu\'on appelle le guidage. Plus tard ont suivi un focaliseur précis et finalement une caméra astro refroidie qui permet aussi les longues expositions.',
         'astrophoto_story_p3': 'Malgré ces extensions, il est devenu apparent que la monture atteignait ses limites en termes de précision et que le contrôle par ordinateur avait encore un potentiel d\'optimisation. Mais maintenant tout était disponible pour construire un système de télescope entièrement automatisé.',
         'astrophoto_story_p4': 'Aujourd\'hui mon hobby englobe tout le spectre de la photographie du ciel : des photos planétaires à travers les images du soleil et de la lune jusqu\'aux photos impressionnantes du ciel profond – galaxies, nébuleuses, amas d\'étoiles, ou même des paysages à grande échelle de la Voie lactée. Le voyage d\'un simple télescope débutant jusqu\'à un système complexe me montre que l\'astrophotographie nécessite non seulement de la technologie, mais surtout de la passion, de la patience et de la curiosité – et c\'est exactement ce qui fait l\'attrait de ce hobby pour moi.',
+
+        # Gallery translations
+        'view_gallery': 'Voir la Galerie',
+        'gallery_title': 'Galerie d\'Astrophotographie',
+        'gallery_description': 'Explorez ma collection d\'images astronomiques capturées au fil des années, des planètes et de la lune aux objets du ciel profond comme les galaxies et nébuleuses.',
+        'gallery_coming_soon': 'Galerie à Venir',
+        'gallery_coming_soon_description': 'Je prépare actuellement ma collection d\'astrophotographie pour l\'affichage. Revenez bientôt pour voir mes images astronomiques !',
+        'back_to_project': 'Retour au Projet',
+        'sample_image_1_title': 'Nébuleuse d\'Orion',
+        'sample_image_1_desc': 'La nébuleuse d\'Orion (M42) capturée avec des techniques de longue exposition.',
+        'sample_image_2_title': 'Saturne',
+        'sample_image_2_desc': 'Vue détaillée de Saturne montrant son système d\'anneaux.',
     }
 }
 

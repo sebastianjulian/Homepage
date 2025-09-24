@@ -158,6 +158,13 @@
                             <p>{{ get_translation('astrophoto_story_p3') }}</p>
 
                             <p>{{ get_translation('astrophoto_story_p4') }}</p>
+
+                            <!-- Gallery button for astrophotography -->
+                            <div class="gallery-button-container" style="margin-top: var(--space-lg); text-align: center;">
+                                <a href="{{ url_for('astrophotography_gallery') }}" class="gallery-button">
+                                    🌌 {{ get_translation('view_gallery') }}
+                                </a>
+                            </div>
                             {% else %}
                             <p>{{ project.description }}</p>
                             <p>This project demonstrates proficiency in {{ project.tech | join(', ') }} and showcases practical application of modern development methodologies.</p>
@@ -343,6 +350,35 @@
     background: rgba(243, 156, 18, 0.2);
     color: #f39c12;
     border: 1px solid #f39c12;
+}
+
+/* Gallery button styling */
+.gallery-button {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-xl);
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(233, 69, 96, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.gallery-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(233, 69, 96, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+.gallery-button:active {
+    transform: translateY(0);
 }
 
 @media (max-width: 1024px) {
