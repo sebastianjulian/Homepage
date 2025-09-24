@@ -18,19 +18,7 @@
 
             <!-- Project Header -->
             <div class="project-detail-header">
-                <div class="project-detail-meta">
-                    <div class="project-categories">
-                        {% for category in project.categories %}
-                        <span class="project-category-badge">{{ category }}</span>
-                        {% endfor %}
-                    </div>
-                    <span class="status-badge status-{{ project.status | status_class }}">
-                        {{ project.status }}
-                    </span>
-                </div>
-
                 <h1 class="project-detail-title">{{ project.title }}</h1>
-                <p class="project-detail-subtitle">{{ project.description }}</p>
 
                 <div class="project-detail-actions">
                     {% if project.github_url %}
@@ -85,11 +73,24 @@
 
                     <!-- Project Description -->
                     <div class="project-section">
-                        <h2>About This Project</h2>
                         <div class="project-description-content">
                             {% if project.id == 'wiener-schuelerliga' %}
-                            <p>The Wiener Schülerliga project is a comprehensive management system designed to organize and facilitate student competitions in Vienna. This platform provides tools for registration, scheduling, results tracking, and communication between participants and organizers.</p>
-                            <p>Built with modern web technologies, the system features a responsive design that works seamlessly across all devices. The backend utilizes Node.js for robust server-side processing, while React provides an interactive and intuitive user interface.</p>
+                            <h3>From Underdogs to Champions – Our Journey to Winning the Wiener Schülerliga</h3>
+                            <p>Looking back at our journey, it's almost hard to believe how far we've come. When we first started competing in lower secondary school, the results were anything but encouraging. Matches often ended in crushing defeats – scorelines like 1:10 were unfortunately no rarity. We lacked structure, confidence, and, quite honestly, the experience to compete with stronger teams.</p>
+
+                            <p>Everything started to change once we moved into the upper secondary. Bit by bit, our performance improved. Instead of suffering heavy defeats, we began to hold our ground, even managing to win about a third of our games. For the first time, it felt like we belonged on the pitch.</p>
+
+                            <p>Last year marked a historic step for our team: we reached the knock-out stage for the very first time. Even though we lost in the first match, that achievement alone gave us the motivation to keep pushing.</p>
+
+                            <p>This season, we entered with a new mindset. We worked on our passing and tactical awareness, and it paid off. We won every but one match in the group stage, yet every game was close – no easy wins. We were no longer a team to be underestimated.</p>
+
+                            <p>In the knock-out stage, our progress became undeniable. Match after match, we grew more confident. The semi-final, however, was the real test. We faced a dedicated sports school, widely regarded as one of the strongest teams in the competition. For most of the game, it looked as though we wouldn't make it. But in the last quarter, everything changed. We turned the game around, and I personally had one of my best performances ever as goalkeeper. With numerous decisive saves, I was honored as man of the match – a memory I will never forget.</p>
+
+                            <p>The final had to be postponed due to the school year ending, which only added to the anticipation. Then, in September, the big day finally arrived. Fueled by determination and belief in ourselves, we gave everything we had – and it was enough. We won the Wiener Schülerliga.</p>
+
+                            <p>From being the team that once lost by double digits, to standing at the very top – this victory is proof of how much can be achieved with perseverance, teamwork, and constant improvement. For us, it wasn't just about lifting the trophy. It was about the journey: growing together, learning from defeats, and turning setbacks into motivation.</p>
+
+                            <p>This championship is the proudest chapter in our story so far – and hopefully just the beginning of many more.</p>
                             {% elif project.id == 'chemieolympiade' %}
                             <p>My participation in the Chemistry Olympiad represents a significant achievement in scientific competition at the national level. This experience involved intensive preparation in theoretical chemistry, laboratory techniques, and problem-solving methodologies.</p>
                             <p>The competition challenged participants with complex chemical problems, experimental design, and analytical thinking. Through this experience, I developed deeper understanding of chemical principles and enhanced my scientific research capabilities.</p>
@@ -112,30 +113,6 @@
                         </div>
                     </div>
 
-                    <!-- Project Status -->
-                    <div class="project-section">
-                        <h2>Project Status</h2>
-                        <div class="status-section">
-                            <div class="status-indicator status-{{ project.status | status_class }}">
-                                {{ project.status }}
-                            </div>
-                            <div class="status-description">
-                                {% if project.status == 'Completed' %}
-                                This project has been successfully completed and is fully functional.
-                                {% elif project.status == 'In Progress' %}
-                                This project is currently under active development.
-                                {% elif project.status == 'Current' %}
-                                This is an ongoing project with regular updates and improvements.
-                                {% elif project.status == 'Achievement' %}
-                                This represents a completed achievement or competition participation.
-                                {% elif project.status == 'Ongoing' %}
-                                This is a continuous project with regular additions and updates.
-                                {% else %}
-                                {{ project.status }}
-                                {% endif %}
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -279,6 +256,13 @@
 .project-description-content p {
     margin-bottom: var(--space-lg);
     color: var(--text-secondary);
+}
+
+.project-description-content h3 {
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    margin-bottom: var(--space-lg);
+    margin-top: var(--space-lg);
 }
 
 .status-section {
