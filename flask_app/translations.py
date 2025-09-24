@@ -79,6 +79,17 @@ TRANSLATIONS = {
         'interest_physics': 'Physics and scientific research',
         'interest_additional': '[Placeholder for additional hobby]',
         'education_timeline': 'Education Timeline',
+
+        # Wiener Schülerliga Story
+        'wiener_story_title': 'From Underdogs to Champions – Our Journey to Winning the Wiener Schülerliga',
+        'wiener_story_p1': 'Looking back at our journey, it\'s almost hard to believe how far we\'ve come. When we first started competing in lower secondary school, the results were anything but encouraging. Matches often ended in crushing defeats – scorelines like 1:10 were unfortunately no rarity. We lacked structure, confidence, and, quite honestly, the experience to compete with stronger teams.',
+        'wiener_story_p2': 'Everything started to change once we moved into the upper secondary. Bit by bit, our performance improved. Instead of suffering heavy defeats, we began to hold our ground, even managing to win about a third of our games. For the first time, it felt like we belonged on the pitch.',
+        'wiener_story_p3': 'Last year marked a historic step for our team: we reached the knock-out stage for the very first time. Even though we lost in the first match, that achievement alone gave us the motivation to keep pushing.',
+        'wiener_story_p4': 'This season, we entered with a new mindset. We worked on our passing and tactical awareness, and it paid off. We won every but one match in the group stage, yet every game was close – no easy wins. We were no longer a team to be underestimated.',
+        'wiener_story_p5': 'In the knock-out stage, our progress became undeniable. Match after match, we grew more confident. The semi-final, however, was the real test. We faced a dedicated sports school, widely regarded as one of the strongest teams in the competition. For most of the game, it looked as though we wouldn\'t make it. But in the last quarter, everything changed. We turned the game around, and I personally had one of my best performances ever as goalkeeper. With numerous decisive saves, I was honored as man of the match – a memory I will never forget.',
+        'wiener_story_p6': 'The final had to be postponed due to the school year ending, which only added to the anticipation. Then, in September, the big day finally arrived. Fueled by determination and belief in ourselves, we gave everything we had – and it was enough. We won the Wiener Schülerliga.',
+        'wiener_story_p7': 'From being the team that once lost by double digits, to standing at the very top – this victory is proof of how much can be achieved with perseverance, teamwork, and constant improvement. For us, it wasn\'t just about lifting the trophy. It was about the journey: growing together, learning from defeats, and turning setbacks into motivation.',
+        'wiener_story_p8': 'This championship is the proudest chapter in our story so far – and hopefully just the beginning of many more.',
     },
 
     'de': {
@@ -156,6 +167,17 @@ Neben der Technik spielt der Sport eine große Rolle in meinem Leben: ob Radfahr
         'interest_physics': 'Physik und wissenschaftliche Forschung',
         'interest_additional': '[Platzhalter für weiteres Hobby]',
         'education_timeline': 'Bildungsweg',
+
+        # Wiener Schülerliga Story
+        'wiener_story_title': 'Von Außenseitern zu Meistern – Unser Weg zum Gewinn der Wiener Schülerliga',
+        'wiener_story_p1': 'Wenn ich auf unseren Weg zurückblicke, kann ich kaum glauben, wie weit wir gekommen sind. Als wir in der Unterstufe zu spielen begannen, waren die Ergebnisse alles andere als ermutigend. Spiele endeten oft in vernichtenden Niederlagen – Ergebnisse wie 1:10 waren leider keine Seltenheit. Uns fehlten Struktur, Selbstvertrauen und ehrlich gesagt auch die Erfahrung, um mit stärkeren Teams zu konkurrieren.',
+        'wiener_story_p2': 'Alles begann sich zu ändern, als wir in die Oberstufe wechselten. Schritt für Schritt verbesserte sich unsere Leistung. Anstatt schwere Niederlagen zu erleiden, begannen wir standzuhalten und gewannen sogar etwa ein Drittel unserer Spiele. Zum ersten Mal hatten wir das Gefühl, auf den Platz zu gehören.',
+        'wiener_story_p3': 'Letztes Jahr markierte einen historischen Schritt für unser Team: Wir erreichten zum allerersten Mal die K.O.-Phase. Obwohl wir im ersten Spiel verloren, gab uns diese Leistung allein die Motivation, weiterzumachen.',
+        'wiener_story_p4': 'Diese Saison starteten wir mit einer neuen Einstellung. Wir arbeiteten an unserem Passspiel und taktischen Verständnis, und es zahlte sich aus. Wir gewannen bis auf ein Spiel alle Gruppenspiele, doch jedes Spiel war knapp – keine einfachen Siege. Wir waren nicht mehr die Mannschaft, die unterschätzt werden konnte.',
+        'wiener_story_p5': 'In der K.O.-Phase wurde unser Fortschritt unbestreitbar. Spiel für Spiel wurden wir selbstbewusster. Das Halbfinale war jedoch die wahre Prüfung. Wir standen einer spezialisierten Sportschule gegenüber, die als eines der stärksten Teams des Turniers galt. Den größten Teil des Spiels sah es so aus, als würden wir es nicht schaffen. Aber im letzten Viertel änderte sich alles. Wir drehten das Spiel, und ich persönlich hatte eine meiner besten Leistungen als Torhüter. Mit zahlreichen entscheidenden Paraden wurde ich als Spieler des Spiels ausgezeichnet – eine Erinnerung, die ich nie vergessen werde.',
+        'wiener_story_p6': 'Das Finale musste aufgrund des Schuljahresendes verschoben werden, was die Vorfreude nur noch steigerte. Dann, im September, kam endlich der große Tag. Angetrieben von Entschlossenheit und dem Glauben an uns selbst gaben wir alles – und es reichte. Wir gewannen die Wiener Schülerliga.',
+        'wiener_story_p7': 'Von der Mannschaft, die einst zweistellig verlor, bis ganz an die Spitze – dieser Sieg ist der Beweis dafür, was mit Ausdauer, Teamwork und ständiger Verbesserung erreicht werden kann. Für uns ging es nicht nur darum, den Pokal zu heben. Es ging um die Reise: zusammenwachsen, aus Niederlagen lernen und Rückschläge in Motivation verwandeln.',
+        'wiener_story_p8': 'Diese Meisterschaft ist das stolzeste Kapitel unserer bisherigen Geschichte – und hoffentlich nur der Anfang von vielen weiteren.',
     },
 
     'fr': {
@@ -233,6 +255,17 @@ Outre la technologie, le sport joue un rôle majeur dans ma vie : que ce soit le
         'interest_physics': 'Physique et recherche scientifique',
         'interest_additional': '[Placeholder pour loisir supplémentaire]',
         'education_timeline': 'Parcours éducatif',
+
+        # Wiener Schülerliga Story
+        'wiener_story_title': 'D\'Outsiders à Champions – Notre Parcours vers la Victoire de la Ligue Scolaire Viennoise',
+        'wiener_story_p1': 'En regardant en arrière sur notre parcours, il est presque difficile de croire jusqu\'où nous sommes arrivés. Quand nous avons commencé à concourir au collège, les résultats étaient tout sauf encourageants. Les matchs se terminaient souvent par des défaites écrasantes – des scores comme 1:10 n\'étaient malheureusement pas rares. Il nous manquait de la structure, de la confiance et, très honnêtement, l\'expérience pour concourir avec des équipes plus fortes.',
+        'wiener_story_p2': 'Tout a commencé à changer quand nous sommes passés au lycée. Petit à petit, notre performance s\'est améliorée. Au lieu de subir de lourdes défaites, nous avons commencé à tenir bon, réussissant même à gagner environ un tiers de nos matchs. Pour la première fois, nous avions l\'impression d\'appartenir au terrain.',
+        'wiener_story_p3': 'L\'année dernière a marqué une étape historique pour notre équipe : nous avons atteint la phase éliminatoire pour la toute première fois. Même si nous avons perdu au premier match, cette réalisation seule nous a donné la motivation de continuer à pousser.',
+        'wiener_story_p4': 'Cette saison, nous sommes entrés avec un nouvel état d\'esprit. Nous avons travaillé sur nos passes et notre conscience tactique, et cela a payé. Nous avons gagné tous les matchs sauf un en phase de groupe, pourtant chaque match était serré – aucune victoire facile. Nous n\'étions plus une équipe à sous-estimer.',
+        'wiener_story_p5': 'En phase éliminatoire, notre progrès est devenu indéniable. Match après match, nous avons gagné en confiance. La demi-finale, cependant, était le vrai test. Nous avons fait face à une école de sport dédiée, largement considérée comme l\'une des équipes les plus fortes de la compétition. Pendant la majeure partie du match, il semblait que nous n\'y arriverions pas. Mais dans le dernier quart, tout a changé. Nous avons retourné le match, et j\'ai personnellement eu l\'une de mes meilleures performances en tant que gardien. Avec de nombreux arrêts décisifs, j\'ai été honoré comme homme du match – un souvenir que je n\'oublierai jamais.',
+        'wiener_story_p6': 'La finale a dû être reportée en raison de la fin de l\'année scolaire, ce qui n\'a fait qu\'ajouter à l\'anticipation. Puis, en septembre, le grand jour est enfin arrivé. Alimentés par la détermination et la croyance en nous-mêmes, nous avons donné tout ce que nous avions – et c\'était suffisant. Nous avons gagné la Ligue Scolaire Viennoise.',
+        'wiener_story_p7': 'D\'être l\'équipe qui perdait autrefois à deux chiffres, à être au sommet – cette victoire est la preuve de ce qui peut être accompli avec la persévérance, le travail d\'équipe et l\'amélioration constante. Pour nous, il ne s\'agissait pas seulement de soulever le trophée. Il s\'agissait du voyage : grandir ensemble, apprendre des défaites, et transformer les revers en motivation.',
+        'wiener_story_p8': 'Ce championnat est le chapitre le plus fier de notre histoire jusqu\'à présent – et espérons juste le début de beaucoup d\'autres.',
     }
 }
 
