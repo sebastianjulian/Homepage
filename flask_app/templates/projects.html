@@ -16,18 +16,26 @@
             <!-- Project Categories Filter -->
             <div class="project-filters text-center" style="margin-bottom: var(--space-3xl);">
                 <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="Web Development">Web Development</button>
+                <button class="filter-btn" data-filter="Achievement">Achievement</button>
+                <button class="filter-btn" data-filter="Education">Education</button>
+                <button class="filter-btn" data-filter="Project">Project</button>
                 <button class="filter-btn" data-filter="Engineering">Engineering</button>
+                <button class="filter-btn" data-filter="Programming">Programming</button>
                 <button class="filter-btn" data-filter="Competition">Competition</button>
-                <button class="filter-btn" data-filter="Photography">Photography</button>
+                <button class="filter-btn" data-filter="Astrophotography">Astrophotography</button>
             </div>
 
             <!-- Projects Grid -->
             <div class="projects-detailed-grid">
                 {% for project in projects %}
-                <div class="project-detailed-card card" data-category="{{ project.category }}">
+                <div class="project-detailed-card card" data-categories="{{ project.categories | join(',') }}" data-status="{{ project.status }}">
                     <div class="project-image-placeholder">
-                        <div class="project-image-content">
+                        {% set image_ext = '.png' if project.id == 'cs50-homepage' else '.jpg' %}
+                        <img src="{{ url_for('static', filename='images/projects/' + project.id + image_ext) }}"
+                             alt="{{ project.title }}"
+                             class="project-image"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="project-image-fallback" style="display: none;">
                             <svg width="100" height="100" viewBox="0 0 100 100">
                                 <defs>
                                     <linearGradient id="projectGrad{{ loop.index }}" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -36,8 +44,11 @@
                                     </linearGradient>
                                 </defs>
                                 <rect width="100" height="100" fill="url(#projectGrad{{ loop.index }})" opacity="0.2" rx="8" />
-                                <text x="50" y="55" text-anchor="middle" fill="var(--text-primary)" font-size="12">
-                                    {{ project.title[:8] }}...
+                                <text x="50" y="45" text-anchor="middle" fill="var(--text-primary)" font-size="10">
+                                    {{ project.title[:12] }}
+                                </text>
+                                <text x="50" y="60" text-anchor="middle" fill="var(--text-secondary)" font-size="8">
+                                    Image Missing
                                 </text>
                             </svg>
                         </div>
@@ -45,7 +56,11 @@
 
                     <div class="project-detailed-content">
                         <div class="project-detailed-header">
-                            <div class="project-category-badge">{{ project.category }}</div>
+                            <div class="project-categories">
+                                {% for category in project.categories %}
+                                <span class="project-category-badge">{{ category }}</span>
+                                {% endfor %}
+                            </div>
                             <span class="status-badge status-{{ project.status | status_class }}">
                                 {{ project.status }}
                             </span>
@@ -155,6 +170,23 @@
     justify-content: center;
     border-radius: var(--radius-lg) var(--radius-lg) 0 0;
     margin: calc(-1 * var(--space-xl)) calc(-1 * var(--space-xl)) var(--space-lg) calc(-1 * var(--space-xl));
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.project-image-fallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .project-detailed-content {
@@ -168,6 +200,13 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: var(--space-md);
+}
+
+.project-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    flex: 1;
 }
 
 .project-category-badge {
@@ -249,10 +288,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Filter projects
             projectCards.forEach(card => {
-                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                if (filter === 'all') {
                     card.style.display = 'flex';
                 } else {
-                    card.style.display = 'none';
+                    const categories = card.getAttribute('data-categories').split(',');
+                    const status = card.getAttribute('data-status');
+
+                    if (categories.includes(filter) || status === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
                 }
             });
         });

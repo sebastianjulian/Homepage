@@ -18,6 +18,12 @@ app.config['DEBUG'] = os.environ.get('FLASK_ENV') == 'development'
 # Language configuration
 DEFAULT_LANGUAGE = 'de'  # Default to German as the original language
 
+# Category definitions
+CATEGORIES = {
+    'content': ['Sports', 'Competition', 'Chemistry', 'Engineering', 'Physics', 'Programming', 'Project Management', 'Event Management', 'CAD', 'Astrophotography', 'Data Processing', 'Hobby'],
+    'status': ['Achievement', 'Education', 'Project']
+}
+
 def get_current_language():
     """Get current language from session or default"""
     return session.get('language', DEFAULT_LANGUAGE)
@@ -35,19 +41,19 @@ PROJECTS_DATA = [
         'id': 'wiener-schuelerliga',
         'title': 'Wiener Schülerliga',
         'description': 'Student league management system and competition platform.',
-        'category': 'Web Development',
-        'tech': ['React', 'Node.js', 'MongoDB'],
-        'status': 'Completed',
-        'github_url': 'https://github.com/sebastianjulian/wiener-schuelerliga',
+        'categories': ['Sports', 'Competition', 'Event Management'],
+        'status': 'Achievement',
+        'tech': ['Event Management', 'Organization', 'Sports'],
+        'github_url': None,
         'demo_url': None
     },
     {
         'id': 'chemieolympiade',
         'title': 'Chemieolympiade',
         'description': 'Chemistry olympiad participation and achievements.',
-        'category': 'Competition',
-        'tech': ['Chemistry', 'Problem Solving'],
+        'categories': ['Chemistry', 'Competition'],
         'status': 'Achievement',
+        'tech': ['Chemistry', 'Problem Solving'],
         'github_url': None,
         'demo_url': None
     },
@@ -55,19 +61,19 @@ PROJECTS_DATA = [
         'id': 'cansat',
         'title': 'CanSat',
         'description': 'Satellite technology project with atmospheric measurements.',
-        'category': 'Engineering',
-        'tech': ['Arduino', 'Sensors', 'Data Analysis'],
-        'status': 'Completed',
+        'categories': ['Engineering', 'Competition', 'Physics', 'Data Processing'],
+        'status': 'Achievement',
+        'tech': ['Raspberry Pi', 'Sensors', 'Data Analysis'],
         'github_url': 'https://github.com/sebastianjulian/cansat',
         'demo_url': None
     },
     {
         'id': 'triton',
-        'title': 'Triton',
-        'description': 'Advanced engineering project with innovative solutions.',
-        'category': 'Engineering',
-        'tech': ['CAD', 'Simulation', 'Prototyping'],
-        'status': 'In Progress',
+        'title': 'TRITON',
+        'description': 'Submarine engineering project with innovative solutions.',
+        'categories': ['Engineering', 'Programming', 'Project Management', 'CAD', 'Physics'],
+        'status': 'Project',
+        'tech': ['CAD', 'Simulation', 'Programming'],
         'github_url': 'https://github.com/sebastianjulian/triton',
         'demo_url': None
     },
@@ -75,9 +81,9 @@ PROJECTS_DATA = [
         'id': 'cs50-homepage',
         'title': 'CS50 Homepage',
         'description': 'Harvard CS50 final project - this very website.',
-        'category': 'Web Development',
+        'categories': ['Programming'],
+        'status': 'Education',
         'tech': ['Flask', 'Python', 'HTML5', 'CSS3'],
-        'status': 'Current',
         'github_url': 'https://github.com/sebastianjulian/Homepage',
         'demo_url': None
     },
@@ -85,10 +91,10 @@ PROJECTS_DATA = [
         'id': 'astrophotography',
         'title': 'Astrophotography',
         'description': 'Deep space imaging and astronomical photography collection.',
-        'category': 'Photography',
-        'tech': ['Telescope', 'Image Processing', 'Stacking'],
-        'status': 'Ongoing',
-        'github_url': 'https://github.com/sebastianjulian/astrophotography',
+        'categories': ['Astrophotography', 'Hobby', 'Data Processing'],
+        'status': 'Achievement',
+        'tech': ['Telescope', 'Image Processing', 'Stacking', 'Event Management'],
+        'github_url': None,
         'demo_url': None
     }
 ]

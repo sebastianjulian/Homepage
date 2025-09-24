@@ -1,0 +1,397 @@
+{% extends "base.html" %}
+
+{% block title %}{{ project.title }} - {{ site_title }}{% endblock %}
+
+{% block content %}
+<div class="project-detail-page" style="padding-top: 80px;">
+    <section class="section">
+        <div class="container">
+            <!-- Back Navigation -->
+            <div class="back-navigation">
+                <a href="{{ url_for('projects') }}" class="back-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.42-1.41L7.83 13H20v-2z"/>
+                    </svg>
+                    Back to Projects
+                </a>
+            </div>
+
+            <!-- Project Header -->
+            <div class="project-detail-header">
+                <div class="project-detail-meta">
+                    <div class="project-categories">
+                        {% for category in project.categories %}
+                        <span class="project-category-badge">{{ category }}</span>
+                        {% endfor %}
+                    </div>
+                    <span class="status-badge status-{{ project.status | status_class }}">
+                        {{ project.status }}
+                    </span>
+                </div>
+
+                <h1 class="project-detail-title">{{ project.title }}</h1>
+                <p class="project-detail-subtitle">{{ project.description }}</p>
+
+                <div class="project-detail-actions">
+                    {% if project.github_url %}
+                    <a href="{{ project.github_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        View on GitHub
+                    </a>
+                    {% endif %}
+                    {% if project.demo_url %}
+                    <a href="{{ project.demo_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
+                        </svg>
+                        Live Demo
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Project Content -->
+            <div class="project-detail-content">
+                <!-- Project Image -->
+                <div class="project-detail-image">
+                    {% set image_ext = '.png' if project.id == 'cs50-homepage' else '.jpg' %}
+                    <img src="{{ url_for('static', filename='images/projects/' + project.id + image_ext) }}"
+                         alt="{{ project.title }}"
+                         class="main-project-image"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="project-image-placeholder" style="display: none;">
+                        <svg width="200" height="200" viewBox="0 0 200 200">
+                            <defs>
+                                <linearGradient id="projectDetailGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="var(--accent-primary)" />
+                                    <stop offset="100%" stop-color="var(--accent-secondary)" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="200" height="200" fill="url(#projectDetailGrad)" opacity="0.2" rx="12" />
+                            <text x="100" y="90" text-anchor="middle" fill="var(--text-primary)" font-size="20">
+                                {{ project.title }}
+                            </text>
+                            <text x="100" y="120" text-anchor="middle" fill="var(--text-secondary)" font-size="14">
+                                Image Coming Soon
+                            </text>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Project Details -->
+                <div class="project-detail-body">
+                    <!-- Technology Stack -->
+                    <div class="project-section">
+                        <h2>Technology Stack</h2>
+                        <div class="tech-stack">
+                            {% for tech in project.tech %}
+                            <span class="tech-tag-large">{{ tech }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <!-- Project Description -->
+                    <div class="project-section">
+                        <h2>About This Project</h2>
+                        <div class="project-description-content">
+                            {% if project.id == 'wiener-schuelerliga' %}
+                            <p>The Wiener Schülerliga project is a comprehensive management system designed to organize and facilitate student competitions in Vienna. This platform provides tools for registration, scheduling, results tracking, and communication between participants and organizers.</p>
+                            <p>Built with modern web technologies, the system features a responsive design that works seamlessly across all devices. The backend utilizes Node.js for robust server-side processing, while React provides an interactive and intuitive user interface.</p>
+                            {% elif project.id == 'chemieolympiade' %}
+                            <p>My participation in the Chemistry Olympiad represents a significant achievement in scientific competition at the national level. This experience involved intensive preparation in theoretical chemistry, laboratory techniques, and problem-solving methodologies.</p>
+                            <p>The competition challenged participants with complex chemical problems, experimental design, and analytical thinking. Through this experience, I developed deeper understanding of chemical principles and enhanced my scientific research capabilities.</p>
+                            {% elif project.id == 'cansat' %}
+                            <p>The CanSat project involves designing and building a satellite simulation system within the constraints of a standard soda can. This engineering challenge combines atmospheric science, electronics, and data analysis in a real-world aerospace context.</p>
+                            <p>Using Arduino microcontrollers and various sensors, the system collects atmospheric data during flight, including temperature, pressure, and altitude measurements. The project demonstrates practical application of engineering principles in space technology.</p>
+                            {% elif project.id == 'triton' %}
+                            <p>Triton represents an advanced engineering project focused on innovative problem-solving and prototype development. This ongoing project combines computer-aided design, simulation, and practical implementation to address real-world engineering challenges.</p>
+                            <p>The project incorporates modern engineering methodologies, including iterative design processes, performance optimization, and comprehensive testing protocols. Each phase builds upon previous findings to refine and improve the overall solution.</p>
+                            {% elif project.id == 'cs50-homepage' %}
+                            <p>This website serves as my final project for Harvard's CS50 course, demonstrating the complete development lifecycle from concept to deployment. The project showcases proficiency in full-stack web development using Flask, Python, and modern front-end technologies.</p>
+                            <p>The site features a space-themed design with responsive layouts, multi-language support, and interactive elements. It represents the culmination of skills learned throughout the CS50 curriculum, including database design, web security, and user experience optimization.</p>
+                            {% elif project.id == 'astrophotography' %}
+                            <p>Astrophotography combines my passion for astronomy with technical photography skills to capture deep-space objects and celestial phenomena. This ongoing project involves specialized equipment, image processing techniques, and long-exposure photography methods.</p>
+                            <p>The collection includes various types of astronomical objects, from planets and the moon to nebulae and star clusters. Each image requires careful planning, multiple exposures, and sophisticated post-processing to reveal the beauty of the cosmos.</p>
+                            {% else %}
+                            <p>{{ project.description }}</p>
+                            <p>This project demonstrates proficiency in {{ project.tech | join(', ') }} and showcases practical application of modern development methodologies.</p>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- Project Status -->
+                    <div class="project-section">
+                        <h2>Project Status</h2>
+                        <div class="status-section">
+                            <div class="status-indicator status-{{ project.status | status_class }}">
+                                {{ project.status }}
+                            </div>
+                            <div class="status-description">
+                                {% if project.status == 'Completed' %}
+                                This project has been successfully completed and is fully functional.
+                                {% elif project.status == 'In Progress' %}
+                                This project is currently under active development.
+                                {% elif project.status == 'Current' %}
+                                This is an ongoing project with regular updates and improvements.
+                                {% elif project.status == 'Achievement' %}
+                                This represents a completed achievement or competition participation.
+                                {% elif project.status == 'Ongoing' %}
+                                This is a continuous project with regular additions and updates.
+                                {% else %}
+                                {{ project.status }}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+.project-detail-page {
+    min-height: calc(100vh - 80px);
+    background: var(--bg-primary);
+}
+
+.back-navigation {
+    margin-bottom: var(--space-2xl);
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    transition: var(--transition-normal);
+    font-weight: 500;
+}
+
+.back-link:hover {
+    color: var(--accent-primary);
+    background: var(--bg-secondary);
+}
+
+.project-detail-header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+}
+
+.project-detail-meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.project-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    justify-content: center;
+}
+
+.project-category-badge {
+    background: rgba(52, 152, 219, 0.2);
+    color: var(--accent-tertiary);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.project-detail-title {
+    font-size: 3rem;
+    margin-bottom: var(--space-md);
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.project-detail-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-2xl);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.project-detail-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.project-detail-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-3xl);
+    align-items: start;
+}
+
+.project-detail-image {
+    position: sticky;
+    top: 100px;
+}
+
+.main-project-image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.project-image-placeholder {
+    width: 100%;
+    aspect-ratio: 1;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.project-detail-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3xl);
+}
+
+.project-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: var(--space-lg);
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: var(--space-sm);
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.tech-tag-large {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+    font-size: 1rem;
+}
+
+.project-description-content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.project-description-content p {
+    margin-bottom: var(--space-lg);
+    color: var(--text-secondary);
+}
+
+.status-section {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.status-indicator {
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.status-description {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* Status colors */
+.status-completed {
+    background: rgba(46, 204, 113, 0.2);
+    color: #2ecc71;
+    border: 1px solid #2ecc71;
+}
+
+.status-in-progress {
+    background: rgba(52, 152, 219, 0.2);
+    color: var(--accent-tertiary);
+    border: 1px solid var(--accent-tertiary);
+}
+
+.status-current {
+    background: rgba(233, 69, 96, 0.2);
+    color: var(--accent-primary);
+    border: 1px solid var(--accent-primary);
+}
+
+.status-achievement {
+    background: rgba(230, 126, 34, 0.2);
+    color: #e67e22;
+    border: 1px solid #e67e22;
+}
+
+.status-ongoing {
+    background: rgba(155, 89, 182, 0.2);
+    color: #9b59b6;
+    border: 1px solid #9b59b6;
+}
+
+@media (max-width: 1024px) {
+    .project-detail-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .project-detail-image {
+        position: static;
+    }
+
+    .project-detail-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-detail-title {
+        font-size: 2rem;
+    }
+
+    .project-detail-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-detail-actions .btn {
+        width: 200px;
+        justify-content: center;
+    }
+
+    .status-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-md);
+    }
+
+    .tech-stack {
+        justify-content: center;
+    }
+}
+</style>
+{% endblock %}
