@@ -90,6 +90,16 @@ TRANSLATIONS = {
         'wiener_story_p6': 'The final had to be postponed due to the school year ending, which only added to the anticipation. Then, in September, the big day finally arrived. Fueled by determination and belief in ourselves, we gave everything we had – and it was enough. We won the Wiener Schülerliga.',
         'wiener_story_p7': 'From being the team that once lost by double digits, to standing at the very top – this victory is proof of how much can be achieved with perseverance, teamwork, and constant improvement. For us, it wasn\'t just about lifting the trophy. It was about the journey: growing together, learning from defeats, and turning setbacks into motivation.',
         'wiener_story_p8': 'This championship is the proudest chapter in our story so far – and hopefully just the beginning of many more.',
+
+        # Chemistry Olympiad Story
+        'chemistry_story_title': 'Participation in the Chemistry Olympiad',
+        'chemistry_story_p1': 'Since my fifth year of high school, I have been participating in the Chemistry Olympiad elective course. Early on, I was fascinated not only by the theory but also by the practical work in the laboratory. The Chemistry Olympiad is for me the ideal way to combine both: to deepen theoretical foundations while simultaneously developing my experimental skills.',
+        'chemistry_story_p2': 'Each year, in addition to the weekly preparation sessions, there is also the so-called course competition. In this, all participating students from the school compete against each other, and the top three qualify to represent the school at the state competition. Together with two friends, I was able to qualify – a great success for all of us.',
+        'chemistry_story_p3': 'The state competition itself is divided into two parts:',
+        'chemistry_story_p4': 'In the theoretical part, we had to engage with current questions in chemistry and apply our knowledge to complex problems.',
+        'chemistry_story_p5': 'The practical part took place in the laboratory. Here, the task was to determine which substances were contained in unknown samples using various methods – such as "spot testing" (the targeted mixing of small chemical drops). Additionally, a titration was on the program, where precise work and accurate observations were crucial.',
+        'chemistry_story_p6': 'Thanks to the dedicated preparation by our teacher, we were able to improve from year to year. Finally, we managed to win the 3rd prize in our last participation – a result that simultaneously set the school record.',
+        'chemistry_story_p7': 'These successes show me that perseverance, curiosity, and good teamwork count not only in the laboratory but also lead to success in competition. For me, the Chemistry Olympiad was not just a competition, but above all an opportunity to live my passion for chemistry and to grow beyond myself.',
     },
 
     'de': {
@@ -178,6 +188,16 @@ Neben der Technik spielt der Sport eine große Rolle in meinem Leben: ob Radfahr
         'wiener_story_p6': 'Das Finale musste aufgrund des Schuljahresendes verschoben werden, was die Vorfreude nur noch steigerte. Dann, im September, kam endlich der große Tag. Angetrieben von Entschlossenheit und dem Glauben an uns selbst gaben wir alles – und es reichte. Wir gewannen die Wiener Schülerliga.',
         'wiener_story_p7': 'Von der Mannschaft, die einst zweistellig verlor, bis ganz an die Spitze – dieser Sieg ist der Beweis dafür, was mit Ausdauer, Teamwork und ständiger Verbesserung erreicht werden kann. Für uns ging es nicht nur darum, den Pokal zu heben. Es ging um die Reise: zusammenwachsen, aus Niederlagen lernen und Rückschläge in Motivation verwandeln.',
         'wiener_story_p8': 'Diese Meisterschaft ist das stolzeste Kapitel unserer bisherigen Geschichte – und hoffentlich nur der Anfang von vielen weiteren.',
+
+        # Chemistry Olympiad Story
+        'chemistry_story_title': 'Teilnahme an der Chemieolympiade',
+        'chemistry_story_p1': 'Seit der 5. Klasse im Gymnasium nehme ich am Freifach Chemieolympiade teil. Schon früh hat mich nicht nur die Theorie, sondern auch das praktische Arbeiten im Labor fasziniert. Die Chemieolympiade ist für mich die ideale Möglichkeit, beides zu verbinden: theoretische Grundlagen zu vertiefen und gleichzeitig meine experimentellen Fähigkeiten weiterzuentwickeln.',
+        'chemistry_story_p2': 'Jedes Jahr gibt es neben den wöchentlichen Vorbereitungseinheiten auch den sogenannten Kurswettbewerb. Dabei treten alle teilnehmenden Schüler:innen der Schule gegeneinander an, und die drei besten qualifizieren sich, um die Schule beim Landeswettbewerb zu vertreten. Gemeinsam mit zwei Freunden konnte ich mich dafür qualifizieren – ein großer Erfolg für uns alle.',
+        'chemistry_story_p3': 'Der Landeswettbewerb selbst ist in zwei Teile gegliedert:',
+        'chemistry_story_p4': 'Im theoretischen Teil mussten wir uns mit aktuellen Fragestellungen der Chemie auseinandersetzen und unser Wissen auf komplexe Probleme anwenden.',
+        'chemistry_story_p5': 'Der praktische Teil fand im Labor statt. Hier galt es, durch verschiedene Methoden – wie dem „Tüpfeln" (das gezielte Mischen kleiner Chemikaliendrops) – herauszufinden, welche Substanzen in unbekannten Proben enthalten waren. Außerdem stand eine Titration auf dem Programm, bei der genaues Arbeiten und präzise Beobachtungen entscheidend waren.',
+        'chemistry_story_p6': 'Dank der engagierten Vorbereitung durch unseren Lehrer konnten wir uns von Jahr zu Jahr steigern. Schließlich gelang es uns, bei unserer letzten Teilnahme den 3. Preis zu erringen – ein Ergebnis, das gleichzeitig den Schulrekord einstellte.',
+        'chemistry_story_p7': 'Diese Erfolge zeigen mir, dass Ausdauer, Neugier und gute Teamarbeit nicht nur im Labor zählen, sondern auch im Wettbewerb zum Ziel führen. Für mich war die Chemieolympiade nicht nur ein Wettbewerb, sondern vor allem eine Möglichkeit, meine Leidenschaft für Chemie zu leben und über mich hinauszuwachsen.',
     },
 
     'fr': {
@@ -266,6 +286,16 @@ Outre la technologie, le sport joue un rôle majeur dans ma vie : que ce soit le
         'wiener_story_p6': 'La finale a dû être reportée en raison de la fin de l\'année scolaire, ce qui n\'a fait qu\'ajouter à l\'anticipation. Puis, en septembre, le grand jour est enfin arrivé. Alimentés par la détermination et la croyance en nous-mêmes, nous avons donné tout ce que nous avions – et c\'était suffisant. Nous avons gagné la Ligue Scolaire Viennoise.',
         'wiener_story_p7': 'D\'être l\'équipe qui perdait autrefois à deux chiffres, à être au sommet – cette victoire est la preuve de ce qui peut être accompli avec la persévérance, le travail d\'équipe et l\'amélioration constante. Pour nous, il ne s\'agissait pas seulement de soulever le trophée. Il s\'agissait du voyage : grandir ensemble, apprendre des défaites, et transformer les revers en motivation.',
         'wiener_story_p8': 'Ce championnat est le chapitre le plus fier de notre histoire jusqu\'à présent – et espérons juste le début de beaucoup d\'autres.',
+
+        # Chemistry Olympiad Story
+        'chemistry_story_title': 'Participation à l\'Olympiade de Chimie',
+        'chemistry_story_p1': 'Depuis ma cinquième année de lycée, je participe au cours optionnel d\'Olympiade de Chimie. Très tôt, j\'ai été fasciné non seulement par la théorie, mais aussi par le travail pratique en laboratoire. L\'Olympiade de Chimie est pour moi le moyen idéal de combiner les deux : approfondir les bases théoriques tout en développant simultanément mes compétences expérimentales.',
+        'chemistry_story_p2': 'Chaque année, en plus des séances de préparation hebdomadaires, il y a aussi ce qu\'on appelle la compétition de cours. Tous les élèves participants de l\'école s\'affrontent, et les trois meilleurs se qualifient pour représenter l\'école au concours régional. Avec deux amis, j\'ai pu me qualifier – un grand succès pour nous tous.',
+        'chemistry_story_p3': 'Le concours régional lui-même est divisé en deux parties :',
+        'chemistry_story_p4': 'Dans la partie théorique, nous avons dû nous confronter aux questions actuelles de la chimie et appliquer nos connaissances à des problèmes complexes.',
+        'chemistry_story_p5': 'La partie pratique s\'est déroulée en laboratoire. Il s\'agissait de déterminer quelles substances étaient contenues dans des échantillons inconnus en utilisant diverses méthodes – comme le "test à la goutte" (le mélange ciblé de petites gouttes de produits chimiques). De plus, une titration était au programme, où un travail précis et des observations exactes étaient cruciaux.',
+        'chemistry_story_p6': 'Grâce à la préparation engagée de notre professeur, nous avons pu nous améliorer d\'année en année. Finalement, nous avons réussi à remporter le 3e prix lors de notre dernière participation – un résultat qui établissait simultanément le record de l\'école.',
+        'chemistry_story_p7': 'Ces succès me montrent que la persévérance, la curiosité et le bon travail d\'équipe comptent non seulement en laboratoire, mais mènent aussi au succès en compétition. Pour moi, l\'Olympiade de Chimie n\'était pas seulement une compétition, mais surtout une opportunité de vivre ma passion pour la chimie et de me dépasser.',
     }
 }
 
