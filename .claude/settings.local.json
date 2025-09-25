@@ -16,7 +16,9 @@
       "Bash(python -m pip install:*)",
       "Bash(python:*)",
       "Bash(cat:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)"
     ],
     "deny": [],
     "ask": []

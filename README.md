@@ -88,7 +88,7 @@ npm run serve
 
 ## 📞 Contact Information
 
-- **Email**: sebastian@maierhofers.net
+- **Email**: contact@antistrange.net
 - **Instagram**: @sebi_maierhofer
 - **GitHub**: sebastianjulian
 

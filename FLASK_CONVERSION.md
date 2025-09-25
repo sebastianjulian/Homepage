@@ -137,7 +137,7 @@ PROJECTS_DATA = [
 PERSONAL_INFO = {
     'name': 'Sebastian Maierhofer',
     'title': 'Technical Physics Student',
-    'email': 'sebastian@maierhofers.net',
+    'email': 'contact@antistrange.net',
     'instagram': 'sebi_maierhofer',
     # ... complete profile data
 }

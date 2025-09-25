@@ -5,7 +5,7 @@
 ### **Client Requirements**
 - **Name**: Sebastian Maierhofer
 - **Education**: VES (elementary) → Schottengymnasium (graduated 2025) → Gap year (Zivildienst) → Technical Physics studies
-- **Contact**: sebastian@maierhofers.net, Instagram: @sebi_maierhofer
+- **Contact**: contact@antistrange.net, Instagram: @sebi_maierhofer
 - **Design Preference**: Modern space-themed dark colors, interactive elements, not too much white space
 
 ### **Technical Architecture**
@@ -119,7 +119,7 @@ src/
 
 ### **4. Contact Page**
 **Integration**:
-- **Email**: sebastian@maierhofers.net (mailto: link opens email client)
+- **Email**: contact@antistrange.net (mailto: link opens email client)
 - **Instagram**: @sebi_maierhofer (direct link to profile)
 - **Contact Form**: Optional backup contact method
 - **Download Resume**: PDF download button
