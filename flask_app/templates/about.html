@@ -11,29 +11,162 @@
                 <p class="page-description">{{ get_translation('about_description') }}</p>
             </div>
 
-            <!-- Education Timeline -->
-            <div class="about-content" style="max-width: 800px; margin: 0 auto;">
-                <div class="education-timeline">
-                    <div class="card">
-                        <h2>{{ get_translation('education_timeline') }}</h2>
-                        <div class="timeline">
-                            {% for edu in personal_info.education %}
-                            <div class="timeline-item {{ edu.status }}">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-content">
-                                    <h4>{{ edu.institution }}</h4>
-                                    <p class="timeline-degree">{{ edu.degree }}</p>
-                                    <span class="timeline-year">{{ edu.year }}</span>
-                                    <span class="timeline-status status-{{ edu.status }}">
-                                        {% if edu.status == 'completed' %}Completed
-                                        {% elif edu.status == 'planned' %}Planned
-                                        {% elif edu.status == 'ongoing' %}Ongoing
-                                        {% else %}{{ edu.status | title }}
-                                        {% endif %}
-                                    </span>
+            <!-- Main Timeline Sections -->
+            <div class="about-content" style="max-width: 1200px; margin: 0 auto;">
+                <!-- Row 1: Education and Experiences -->
+                <div class="timeline-row">
+                    <!-- Education Timeline -->
+                    <div class="timeline-section">
+                        <div class="card">
+                            <h2>{{ get_translation('education_timeline') }}</h2>
+                            <div class="timeline">
+                                {% for edu in personal_info.education %}
+                                <div class="timeline-item {{ edu.status }}">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <h4>{{ edu.institution }}</h4>
+                                        <p class="timeline-degree">{{ edu.degree }}</p>
+                                        <span class="timeline-year">{{ edu.year }}</span>
+                                        <span class="timeline-status status-{{ edu.status }}">
+                                            {% if edu.status == 'completed' %}Completed
+                                            {% elif edu.status == 'planned' %}Planned
+                                            {% elif edu.status == 'ongoing' %}Ongoing
+                                            {% else %}{{ edu.status | title }}
+                                            {% endif %}
+                                        </span>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experiences Timeline -->
+                    <div class="timeline-section">
+                        <div class="card">
+                            <h2>{{ get_translation('experiences') }}</h2>
+                            <div class="timeline">
+                                <div class="timeline-item completed">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <h4>{{ get_translation('competitions_courses') }}</h4>
+                                        <p class="timeline-degree">{{ get_translation('competitions_courses_desc') }}</p>
+                                        <span class="timeline-year">2022–2024</span>
+                                        <span class="timeline-status status-completed">Completed</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item completed">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <h4>{{ get_translation('cern_courses') }}</h4>
+                                        <p class="timeline-degree">Online courses</p>
+                                        <span class="timeline-year">2022–2024</span>
+                                        <span class="timeline-status status-completed">Completed</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item completed">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <h4>{{ get_translation('vrvis_internship') }}</h4>
+                                        <p class="timeline-degree">{{ get_translation('vrvis_internship_desc') }}</p>
+                                        <span class="timeline-year">2022</span>
+                                        <span class="timeline-status status-completed">Completed</span>
+                                    </div>
                                 </div>
                             </div>
-                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2: Languages and Engagement -->
+                <div class="timeline-row">
+                    <!-- Languages and Skills Timeline -->
+                    <div class="timeline-section">
+                        <div class="card">
+                            <h2>{{ get_translation('languages_skills') }}</h2>
+                            <div class="timeline">
+                                <div class="timeline-item ongoing">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <h4>{{ get_translation('german_native') }}</h4>
+                                        <p class="timeline-degree">Native proficiency</p>
+                                        <span class="timeline-year">Native</span>
+                                        <span class="timeline-status status-ongoing">Native</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item ongoing">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <h4>{{ get_translation('english_bilingual') }}</h4>
+                                        <p class="timeline-degree">Bilingual proficiency</p>
+                                        <span class="timeline-year">Fluent</span>
+                                        <span class="timeline-status status-ongoing">Bilingual</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item ongoing">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <h4>{{ get_translation('french_good') }}</h4>
+                                        <p class="timeline-degree">Good conversational level</p>
+                                        <span class="timeline-year">B2</span>
+                                        <span class="timeline-status status-ongoing">Good</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item completed">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <h4>{{ get_translation('latin_very_good') }}</h4>
+                                        <p class="timeline-degree">Academic level</p>
+                                        <span class="timeline-year">School</span>
+                                        <span class="timeline-status status-completed">Very Good</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item ongoing">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <h4>{{ get_translation('programming') }}</h4>
+                                        <p class="timeline-degree">Web & Software Development</p>
+                                        <span class="timeline-year">2018–</span>
+                                        <span class="timeline-status status-ongoing">Ongoing</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Engagement and Hobbies Timeline -->
+                    <div class="timeline-section">
+                        <div class="card">
+                            <h2>{{ get_translation('engagement_hobbies') }}</h2>
+                            <div class="timeline">
+                                <div class="timeline-item ongoing">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <h4>Astronomy</h4>
+                                        <p class="timeline-degree">{{ get_translation('astronomy_desc') }}</p>
+                                        <span class="timeline-year">2020–</span>
+                                        <span class="timeline-status status-ongoing">Ongoing</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item completed">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <h4>{{ get_translation('class_representative') }}</h4>
+                                        <p class="timeline-degree">Student leadership role</p>
+                                        <span class="timeline-year">School</span>
+                                        <span class="timeline-status status-completed">Completed</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item ongoing">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <h4>Sports & Reading</h4>
+                                        <p class="timeline-degree">{{ get_translation('sports_reading') }}</p>
+                                        <span class="timeline-year">Ongoing</span>
+                                        <span class="timeline-status status-ongoing">Active</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -158,13 +291,68 @@
     color: #3498db;
 }
 
+.timeline-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-2xl);
+}
+
+.timeline-section {
+    flex: 1;
+}
+
+.experience-item {
+    margin-bottom: var(--space-xl);
+}
+
+.experience-item h3 {
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+    font-size: 1.1rem;
+}
+
+.experience-item ul {
+    list-style-type: disc;
+    padding-left: var(--space-lg);
+}
+
+.experience-item li {
+    color: var(--text-secondary);
+    margin-bottom: var(--space-sm);
+    line-height: 1.6;
+}
+
+.experience-item p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.languages-section ul,
+.engagement-section ul {
+    list-style-type: disc;
+    padding-left: var(--space-lg);
+}
+
+.languages-section li,
+.engagement-section li {
+    color: var(--text-secondary);
+    margin-bottom: var(--space-sm);
+    line-height: 1.6;
+}
+
 @media (max-width: 768px) {
     .about-content {
         grid-template-columns: 1fr;
     }
-    
+
     .page-title {
         font-size: 2rem;
+    }
+
+    .timeline-row {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
     }
 }
 </style>
