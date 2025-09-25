@@ -111,20 +111,8 @@ PERSONAL_INFO = {
     'github': 'sebastianjulian',
     'education': [
         {
-            'institution': 'Technical Physics Studies',
-            'degree': 'Bachelor of Science (planned)',
-            'year': '2026+',
-            'status': 'planned'
-        },
-        {
-            'institution': 'Civil Service',
-            'degree': 'Zivildienst',
-            'year': '2025-2026',
-            'status': 'ongoing'
-        },
-        {
             'institution': 'Schottengymnasium',
-            'degree': 'Matura (High School Diploma)',
+            'degree': 'Matura',
             'year': '2025',
             'status': 'completed'
         },

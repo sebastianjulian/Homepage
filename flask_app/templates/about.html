@@ -13,7 +13,7 @@
 
             <!-- Main Timeline Sections -->
             <div class="about-content" style="max-width: 1200px; margin: 0 auto;">
-                <!-- Row 1: Education and Experiences -->
+                <!-- Row 1: Education and Languages -->
                 <div class="timeline-row">
                     <!-- Education Timeline -->
                     <div class="timeline-section">
@@ -41,45 +41,6 @@
                         </div>
                     </div>
 
-                    <!-- Experiences Timeline -->
-                    <div class="timeline-section">
-                        <div class="card">
-                            <h2>{{ get_translation('experiences') }}</h2>
-                            <div class="timeline">
-                                <div class="timeline-item completed">
-                                    <div class="timeline-dot"></div>
-                                    <div class="timeline-content">
-                                        <h4>{{ get_translation('competitions_courses') }}</h4>
-                                        <p class="timeline-degree">{{ get_translation('competitions_courses_desc') }}</p>
-                                        <span class="timeline-year">2022–2024</span>
-                                        <span class="timeline-status status-completed">Completed</span>
-                                    </div>
-                                </div>
-                                <div class="timeline-item completed">
-                                    <div class="timeline-dot"></div>
-                                    <div class="timeline-content">
-                                        <h4>{{ get_translation('cern_courses') }}</h4>
-                                        <p class="timeline-degree">Online courses</p>
-                                        <span class="timeline-year">2022–2024</span>
-                                        <span class="timeline-status status-completed">Completed</span>
-                                    </div>
-                                </div>
-                                <div class="timeline-item completed">
-                                    <div class="timeline-dot"></div>
-                                    <div class="timeline-content">
-                                        <h4>{{ get_translation('vrvis_internship') }}</h4>
-                                        <p class="timeline-degree">{{ get_translation('vrvis_internship_desc') }}</p>
-                                        <span class="timeline-year">2022</span>
-                                        <span class="timeline-status status-completed">Completed</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Row 2: Languages and Engagement -->
-                <div class="timeline-row">
                     <!-- Languages and Skills Timeline -->
                     <div class="timeline-section">
                         <div class="card">
@@ -108,7 +69,7 @@
                                     <div class="timeline-content">
                                         <h4>{{ get_translation('french_good') }}</h4>
                                         <p class="timeline-degree">Good conversational level</p>
-                                        <span class="timeline-year">B2</span>
+                                        <span class="timeline-year">B1-B2</span>
                                         <span class="timeline-status status-ongoing">Good</span>
                                     </div>
                                 </div>
@@ -116,7 +77,7 @@
                                     <div class="timeline-dot"></div>
                                     <div class="timeline-content">
                                         <h4>{{ get_translation('latin_very_good') }}</h4>
-                                        <p class="timeline-degree">Academic level</p>
+                                        <p class="timeline-degree">Großes Latinum (Great Latinum)</p>
                                         <span class="timeline-year">School</span>
                                         <span class="timeline-status status-completed">Very Good</span>
                                     </div>
@@ -133,6 +94,35 @@
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <!-- Row 2: Experiences and Engagement -->
+                <div class="timeline-row">
+                    <!-- Experiences Timeline -->
+                    <div class="timeline-section">
+                        <div class="card">
+                            <h2>{{ get_translation('experiences') }}</h2>
+                            <div class="timeline">
+                                <div class="timeline-item completed">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <h4>{{ get_translation('competitions_courses') }}</h4>
+                                        <div class="experience-list">
+                                            <ul>
+                                                <li>CanSat Competition (2024)</li>
+                                                <li>Chemistry Olympiad (2022-2025)</li>
+                                                <li>DACH Seminar (2024)</li>
+                                                <li>CERN Courses (2022-2024)</li>
+                                                <li>VRVIS Internship (2022)</li>
+                                            </ul>
+                                        </div>
+                                        <span class="timeline-year">2022–2025</span>
+                                        <span class="timeline-status status-completed">Completed</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Engagement and Hobbies Timeline -->
                     <div class="timeline-section">
@@ -143,7 +133,12 @@
                                     <div class="timeline-dot"></div>
                                     <div class="timeline-content">
                                         <h4>Astronomy</h4>
-                                        <p class="timeline-degree">{{ get_translation('astronomy_desc') }}</p>
+                                        <div class="experience-list">
+                                            <ul>
+                                                <li>Astrophotography</li>
+                                                <li>Astronomy evenings (knowledge transfer & image processing)</li>
+                                            </ul>
+                                        </div>
                                         <span class="timeline-year">2020–</span>
                                         <span class="timeline-status status-ongoing">Ongoing</span>
                                     </div>
@@ -160,10 +155,22 @@
                                 <div class="timeline-item ongoing">
                                     <div class="timeline-dot"></div>
                                     <div class="timeline-content">
-                                        <h4>Sports & Reading</h4>
-                                        <p class="timeline-degree">{{ get_translation('sports_reading') }}</p>
+                                        <h4>Free Time Activities</h4>
+                                        <div class="experience-list">
+                                            <ul>
+                                                <li>Soccer</li>
+                                                <li>Tennis</li>
+                                                <li>Basketball</li>
+                                                <li>Cycling</li>
+                                                <li>Swimming</li>
+                                                <li>Volleyball</li>
+                                                <li>Table Tennis</li>
+                                                <li>Reading</li>
+                                                <li>Cooking</li>
+                                            </ul>
+                                        </div>
                                         <span class="timeline-year">Ongoing</span>
-                                        <span class="timeline-status status-ongoing">Active</span>
+                                        <span class="timeline-status status-ongoing">Ongoing</span>
                                     </div>
                                 </div>
                             </div>
@@ -318,6 +325,18 @@
 }
 
 .experience-item li {
+    color: var(--text-secondary);
+    margin-bottom: var(--space-sm);
+    line-height: 1.6;
+}
+
+.experience-list ul {
+    list-style-type: disc;
+    padding-left: var(--space-lg);
+    margin: var(--space-sm) 0;
+}
+
+.experience-list li {
     color: var(--text-secondary);
     margin-bottom: var(--space-sm);
     line-height: 1.6;
