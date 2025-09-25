@@ -37,17 +37,17 @@ TRANSLATIONS = {
 
         # Project Data
         'project_wiener_schuelerliga_title': 'Wiener Schülerliga',
-        'project_wiener_schuelerliga_desc': 'Student league management system and competition platform.',
+        'project_wiener_schuelerliga_desc': 'Our journey from crushing defeats with scorelines like 1:10 to ultimately winning the championship. A story of growth, structure, and determination that transformed underdogs into champions.',
         'project_chemieolympiade_title': 'Chemistry Olympiad',
-        'project_chemieolympiade_desc': 'Chemistry olympiad participation and achievements.',
+        'project_chemieolympiade_desc': 'Participation in the Chemistry Olympiad since fifth year of high school, combining theoretical knowledge with hands-on laboratory work to develop both understanding and experimental skills.',
         'project_cansat_title': 'CanSat',
-        'project_cansat_desc': 'Satellite technology project with atmospheric measurements.',
+        'project_cansat_desc': 'European Space Agency (ESA) project to develop a satellite the size of a beverage can, launch it with a rocket, and safely return it to Earth while collecting atmospheric data.',
         'project_triton_title': 'Triton',
-        'project_triton_desc': 'Advanced engineering project with innovative solutions.',
+        'project_triton_desc': 'Complex system for autonomous navigation underwater that evolved from our CanSat project. Using physics, programming, electronics, and project management to explore marine robotics.',
         'project_cs50_title': 'CS50 Homepage',
-        'project_cs50_desc': 'Harvard CS50 final project - this very website.',
+        'project_cs50_desc': 'Completed Harvard University\'s comprehensive CS50: Introduction to Computer Science course, one of the most well-known introductions to computer science. This website serves as the final project.',
         'project_astrophoto_title': 'Astrophotography',
-        'project_astrophoto_desc': 'Deep space imaging and astronomical photography collection.',
+        'project_astrophoto_desc': 'Three-year journey from a beginner telescope setup to an automated system, capturing deep-sky objects like galaxies and nebulae that were initially beyond reach of basic equipment.',
 
         # Categories
         'cat_web_development': 'Web Development',
@@ -246,17 +246,17 @@ Neben der Technik spielt der Sport eine große Rolle in meinem Leben: ob Radfahr
 
         # Project Data
         'project_wiener_schuelerliga_title': 'Wiener Schülerliga',
-        'project_wiener_schuelerliga_desc': 'Schülerliga-Verwaltungssystem und Wettbewerbsplattform.',
+        'project_wiener_schuelerliga_desc': 'Unsere Reise von vernichtenden Niederlagen mit Ergebnissen wie 1:10 bis zum ultimativen Gewinn der Meisterschaft. Eine Geschichte von Wachstum, Struktur und Entschlossenheit, die Außenseiter zu Meistern machte.',
         'project_chemieolympiade_title': 'Chemieolympiade',
-        'project_chemieolympiade_desc': 'Teilnahme und Erfolge bei der Chemieolympiade.',
+        'project_chemieolympiade_desc': 'Teilnahme an der Chemieolympiade seit der fünften Klasse Gymnasium, die theoretisches Wissen mit praktischer Laborarbeit verbindet, um sowohl Verständnis als auch experimentelle Fähigkeiten zu entwickeln.',
         'project_cansat_title': 'CanSat',
-        'project_cansat_desc': 'Satellitentechnologie-Projekt mit atmosphärischen Messungen.',
+        'project_cansat_desc': 'Projekt der Europäischen Weltraumorganisation (ESA) zur Entwicklung eines Satelliten in der Größe einer Getränkedose, Start mit einer Rakete und sichere Rückkehr zur Erde unter Sammlung atmosphärischer Daten.',
         'project_triton_title': 'Triton',
-        'project_triton_desc': 'Fortgeschrittenes Ingenieursprojekt mit innovativen Lösungen.',
+        'project_triton_desc': 'Komplexes System für autonome Unterwassernavigation, das sich aus unserem CanSat-Projekt entwickelte. Nutzung von Physik, Programmierung, Elektronik und Projektmanagement zur Erforschung der Meeresrobotik.',
         'project_cs50_title': 'CS50 Homepage',
-        'project_cs50_desc': 'Harvard CS50 Abschlussprojekt - genau diese Website.',
+        'project_cs50_desc': 'Abschluss von Harvard Universitys umfassendem CS50: Introduction to Computer Science Kurs, einer der bekanntesten und umfassendsten Einführungen in die Informatik. Diese Website dient als Abschlussprojekt.',
         'project_astrophoto_title': 'Astrophotographie',
-        'project_astrophoto_desc': 'Deep Space Bildgebung und astronomische Fotosammlung.',
+        'project_astrophoto_desc': 'Dreijährige Reise von einer Anfänger-Teleskop-Einrichtung zu einem automatisierten System, das Deep-Sky-Objekte wie Galaxien und Nebel einfängt, die ursprünglich außerhalb der Reichweite grundlegender Ausrüstung lagen.',
 
         # Categories
         'cat_web_development': 'Webentwicklung',
@@ -455,17 +455,17 @@ Outre la technologie, le sport joue un rôle majeur dans ma vie : que ce soit le
 
         # Project Data
         'project_wiener_schuelerliga_title': 'Ligue scolaire viennoise',
-        'project_wiener_schuelerliga_desc': 'Système de gestion de ligue étudiante et plateforme de compétition.',
+        'project_wiener_schuelerliga_desc': 'Notre parcours des défaites écrasantes avec des scores comme 1:10 jusqu’à la victoire ultime du championnat. Une histoire de croissance, de structure et de détermination qui a transformé des outsiders en champions.',
         'project_chemieolympiade_title': 'Olympiade de chimie',
-        'project_chemieolympiade_desc': 'Participation et réalisations aux olympiades de chimie.',
+        'project_chemieolympiade_desc': 'Participation à l’Olympiade de Chimie depuis la cinquième année de lycée, combinant connaissances théoriques et travail pratique en laboratoire pour développer à la fois la compréhension et les compétences expérimentales.',
         'project_cansat_title': 'CanSat',
-        'project_cansat_desc': 'Projet de technologie satellitaire avec mesures atmosphériques.',
+        'project_cansat_desc': 'Projet de l’Agence Spatiale Européenne (ESA) pour développer un satellite de la taille d’une canette de boisson, le lancer avec une fusée et le ramener en sécurité sur Terre tout en collectant des données atmosphériques.',
         'project_triton_title': 'Triton',
-        'project_triton_desc': 'Projet d\'ingénierie avancé avec solutions innovantes.',
+        'project_triton_desc': 'Système complexe pour la navigation autonome sous-marine qui a évolué à partir de notre projet CanSat. Utilisation de la physique, programmation, électronique et gestion de projet pour explorer la robotique marine.',
         'project_cs50_title': 'Page d\'accueil CS50',
-        'project_cs50_desc': 'Projet final Harvard CS50 - ce site web même.',
+        'project_cs50_desc': 'Completion du cours complet CS50: Introduction to Computer Science de l’Université Harvard, l’une des introductions les plus connues et complètes à l’informatique. Ce site web sert de projet final.',
         'project_astrophoto_title': 'Astrophotographie',
-        'project_astrophoto_desc': 'Imagerie spatiale profonde et collection de photographie astronomique.',
+        'project_astrophoto_desc': 'Parcours de trois ans d’une configuration de télescope débutant à un système automatisé, capturant des objets du ciel profond comme les galaxies et nébuleuses qui étaient initialement hors de portée de l’équipement de base.',
 
         # Categories
         'cat_web_development': 'Développement Web',
