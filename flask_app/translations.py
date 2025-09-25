@@ -59,9 +59,18 @@ TRANSLATIONS = {
         # Status
         'status_completed': 'Completed',
         'status_achievement': 'Achievement',
+        'status_education': 'Education',
+        'status_hobby': 'Hobby',
+        'status_project': 'Project',
         'status_in_progress': 'In Progress',
         'status_current': 'Current',
         'status_ongoing': 'Ongoing',
+
+        # Tags
+        'tag_astrophotography': 'Astrophotography',
+        'tag_competition': 'Competition',
+        'tag_engineering': 'Engineering',
+        'tag_programming': 'Programming',
 
         # Personal Info
         'personal_subtitle': 'Aspiring Engineer • Problem Solver',
@@ -282,9 +291,18 @@ Neben der Technik spielt der Sport eine große Rolle in meinem Leben: ob Radfahr
         # Status
         'status_completed': 'Abgeschlossen',
         'status_achievement': 'Erfolg',
+        'status_education': 'Bildung',
+        'status_hobby': 'Hobby',
+        'status_project': 'Projekt',
         'status_in_progress': 'In Arbeit',
         'status_current': 'Aktuell',
         'status_ongoing': 'Laufend',
+
+        # Tags
+        'tag_astrophotography': 'Astrophotographie',
+        'tag_competition': 'Wettbewerb',
+        'tag_engineering': 'Ingenieurswesen',
+        'tag_programming': 'Programmierung',
 
         # Personal Info
         'personal_subtitle': 'Angehender Ingenieur • Problemlöser',
@@ -505,9 +523,18 @@ Outre la technologie, le sport joue un rôle majeur dans ma vie : que ce soit le
         # Status
         'status_completed': 'Terminé',
         'status_achievement': 'Réalisation',
+        'status_education': 'Éducation',
+        'status_hobby': 'Loisir',
+        'status_project': 'Projet',
         'status_in_progress': 'En cours',
         'status_current': 'Actuel',
         'status_ongoing': 'En cours',
+
+        # Tags
+        'tag_astrophotography': 'Astrophotographie',
+        'tag_competition': 'Compétition',
+        'tag_engineering': 'Ingénierie',
+        'tag_programming': 'Programmation',
 
         # Personal Info
         'personal_subtitle': 'Ingénieur aspirant • Résolveur de problèmes',
