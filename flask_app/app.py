@@ -17,7 +17,7 @@ app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev-secret-key-change-i
 app.config['DEBUG'] = os.environ.get('FLASK_ENV') == 'development'
 
 # Language configuration
-DEFAULT_LANGUAGE = 'de'  # Default to German as the original language
+DEFAULT_LANGUAGE = 'en'  # Default to English
 
 # Category definitions
 CATEGORIES = {
@@ -111,22 +111,28 @@ PERSONAL_INFO = {
     'github': 'sebastianjulian',
     'education': [
         {
+            'institution': 'Technical Physics Studies',
+            'degree': 'Bachelor of Science (planned)',
+            'year': '2026+',
+            'status': 'planned'
+        },
+        {
+            'institution': 'Civil Service',
+            'degree': 'Zivildienst',
+            'year': '2025-2026',
+            'status': 'ongoing'
+        },
+        {
             'institution': 'Schottengymnasium',
             'degree': 'Matura (High School Diploma)',
             'year': '2025',
             'status': 'completed'
         },
         {
-            'institution': 'VES (Volksschule)',
-            'degree': 'Elementary Education', 
+            'institution': 'VES',
+            'degree': 'Elementary School',
             'year': '2017',
             'status': 'completed'
-        },
-        {
-            'institution': 'Technical Physics Studies',
-            'degree': 'Bachelor of Science (planned)',
-            'year': '2026+',
-            'status': 'planned'
         }
     ],
     'current_status': 'Zivildienst (Civil Service)',

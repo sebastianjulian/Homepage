@@ -11,28 +11,8 @@
                 <p class="page-description">{{ get_translation('about_description') }}</p>
             </div>
 
-            <div class="about-content grid grid-2" style="align-items: start; gap: var(--space-3xl);">
-                <!-- Personal Info -->
-                <div class="about-text">
-                    <div class="card">
-                        <h2>{{ get_translation('hello_sebastian') }}</h2>
-                        <p>{{ personal_info.description }}</p>
-                        
-                        <h3>{{ get_translation('current_status_title') }}</h3>
-                        <p>{{ personal_info.current_status }}</p>
-                        
-                        <h3>{{ get_translation('interests_hobbies') }}</h3>
-                        <ul style="color: var(--text-secondary); line-height: 1.8;">
-                            <li>{{ get_translation('interest_astrophotography') }}</li>
-                            <li>{{ get_translation('interest_programming') }}</li>
-                            <li>{{ get_translation('interest_engineering') }}</li>
-                            <li>{{ get_translation('interest_physics') }}</li>
-                            <li>{{ get_translation('interest_additional') }}</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Education Timeline -->
+            <!-- Education Timeline -->
+            <div class="about-content" style="max-width: 800px; margin: 0 auto;">
                 <div class="education-timeline">
                     <div class="card">
                         <h2>{{ get_translation('education_timeline') }}</h2>
@@ -45,8 +25,9 @@
                                     <p class="timeline-degree">{{ edu.degree }}</p>
                                     <span class="timeline-year">{{ edu.year }}</span>
                                     <span class="timeline-status status-{{ edu.status }}">
-                                        {% if edu.status == 'completed' %}✓ Completed
-                                        {% elif edu.status == 'planned' %}📅 Planned
+                                        {% if edu.status == 'completed' %}Completed
+                                        {% elif edu.status == 'planned' %}Planned
+                                        {% elif edu.status == 'ongoing' %}Ongoing
                                         {% else %}{{ edu.status | title }}
                                         {% endif %}
                                     </span>
@@ -134,6 +115,10 @@
     background: var(--accent-secondary);
 }
 
+.timeline-item.ongoing .timeline-dot {
+    background: #3498db;
+}
+
 .timeline-content h4 {
     color: var(--text-primary);
     font-size: 1.2rem;
@@ -166,6 +151,11 @@
 .timeline-status.status-planned {
     background: rgba(243, 156, 18, 0.2);
     color: #f39c12;
+}
+
+.timeline-status.status-ongoing {
+    background: rgba(52, 152, 219, 0.2);
+    color: #3498db;
 }
 
 @media (max-width: 768px) {
