@@ -211,6 +211,20 @@ TRANSLATIONS = {
         'sample_image_1_desc': 'The Orion Nebula (M42) captured with long exposure techniques.',
         'sample_image_2_title': 'Saturn',
         'sample_image_2_desc': 'Detailed view of Saturn showing its ring system.',
+
+        # Downloads Section
+        'downloads': 'Downloads',
+        'downloads_description': 'Access my professional documents and portfolio materials.',
+        'download_resume': 'Resume / CV',
+        'download_resume_desc': 'Complete professional resume with experience and skills',
+        'download_portfolio': 'Portfolio Showcase',
+        'download_portfolio_desc': 'Comprehensive portfolio with project details and case studies',
+        'download_timeline': 'Project Timeline',
+        'download_timeline_desc': 'Visual timeline of major projects and achievements',
+        'download_skills': 'Technical Skills Matrix',
+        'download_skills_desc': 'Detailed breakdown of programming languages and technologies',
+        'download_pdf': 'Download PDF',
+        'downloads_note': 'All documents are in PDF format and regularly updated.',
     },
 
     'de': {
@@ -420,6 +434,20 @@ Neben der Technik spielt der Sport eine große Rolle in meinem Leben: ob Radfahr
         'sample_image_1_desc': 'Der Orionnebel (M42) aufgenommen mit Langzeittechnik.',
         'sample_image_2_title': 'Saturn',
         'sample_image_2_desc': 'Detaillierte Aufnahme des Saturn mit seinem Ringsystem.',
+
+        # Downloads Section
+        'downloads': 'Downloads',
+        'downloads_description': 'Zugang zu meinen professionellen Dokumenten und Portfolio-Materialien.',
+        'download_resume': 'Lebenslauf / CV',
+        'download_resume_desc': 'Vollständiger professioneller Lebenslauf mit Erfahrungen und Fähigkeiten',
+        'download_portfolio': 'Portfolio-Präsentation',
+        'download_portfolio_desc': 'Umfassendes Portfolio mit Projektdetails und Fallstudien',
+        'download_timeline': 'Projekt-Zeitstrahl',
+        'download_timeline_desc': 'Visuelle Zeitlinie wichtiger Projekte und Erfolge',
+        'download_skills': 'Technische Fähigkeiten-Matrix',
+        'download_skills_desc': 'Detaillierte Aufschlüsselung von Programmiersprachen und Technologien',
+        'download_pdf': 'PDF herunterladen',
+        'downloads_note': 'Alle Dokumente sind im PDF-Format und werden regelmäßig aktualisiert.',
     },
 
     'fr': {

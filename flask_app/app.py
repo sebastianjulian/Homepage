@@ -4,9 +4,14 @@ Professional homepage with space-themed design
 """
 
 from flask import Flask, render_template, request, jsonify, session
+from flask_mail import Mail, Message
 import os
 from datetime import datetime
 from translations import get_translation, get_supported_languages, TRANSLATIONS
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Initialize Flask application
 app = Flask(__name__)
@@ -15,6 +20,17 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 # Configuration
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev-secret-key-change-in-production')
 app.config['DEBUG'] = os.environ.get('FLASK_ENV') == 'development'
+
+# Email configuration
+app.config['MAIL_SERVER'] = os.environ.get('MAIL_SERVER', 'smtp.gmail.com')
+app.config['MAIL_PORT'] = int(os.environ.get('MAIL_PORT', 587))
+app.config['MAIL_USE_TLS'] = os.environ.get('MAIL_USE_TLS', 'True').lower() == 'true'
+app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
+app.config['CONTACT_EMAIL'] = os.environ.get('CONTACT_EMAIL', 'contact@antistrange.net')
+
+# Initialize Flask-Mail
+mail = Mail(app)
 
 # Language configuration
 DEFAULT_LANGUAGE = 'en'  # Default to English
@@ -106,7 +122,7 @@ PERSONAL_INFO = {
     'title': '',
     'subtitle': 'Aspiring Engineer • Problem Solver',
     'description': 'Recent graduate from Schottengymnasium, currently completing Zivildienst before pursuing Technical Physics. Passionate about engineering, programming, and astrophotography.',
-    'email': 'sebastian@maierhofers.net',
+    'email': 'contact@antistrange.net',
     'instagram': 'sebi_maierhofer',
     'github': 'sebastianjulian',
     'education': [
@@ -249,18 +265,54 @@ def api_projects():
 def api_contact():
     """API endpoint for contact form submission"""
     data = request.get_json()
-    
+
     # Basic validation
     required_fields = ['name', 'email', 'message']
     if not all(field in data for field in required_fields):
         return jsonify({'error': 'Missing required fields'}), 400
-    
-    # In a real application, you would save this to a database or send an email
-    # For now, just return success
-    return jsonify({
-        'success': True,
-        'message': 'Thank you for your message! I will get back to you soon.'
-    })
+
+    # Validate email format (basic check)
+    if '@' not in data['email'] or '.' not in data['email']:
+        return jsonify({'error': 'Invalid email address'}), 400
+
+    try:
+        # Create and send email
+        msg = Message(
+            subject=f"Website Contact: Message from {data['name']}",
+            sender=app.config['MAIL_USERNAME'],
+            recipients=[app.config['CONTACT_EMAIL']],
+            reply_to=data['email']
+        )
+
+        # Email body
+        msg.body = f"""
+New message received from your website contact form:
+
+Name: {data['name']}
+Email: {data['email']}
+Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+
+Message:
+{data['message']}
+
+---
+This message was sent via the contact form on your website.
+You can reply directly to this email to respond to {data['name']}.
+        """
+
+        mail.send(msg)
+
+        return jsonify({
+            'success': True,
+            'message': 'Thank you for your message! I will get back to you soon.'
+        })
+
+    except Exception as e:
+        # Log the error (in production, use proper logging)
+        print(f"Email sending failed: {str(e)}")
+        return jsonify({
+            'error': 'Sorry, there was an error sending your message. Please try using the direct email link instead.'
+        }), 500
 
 @app.errorhandler(404)
 def not_found(error):

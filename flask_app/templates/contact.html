@@ -75,37 +75,44 @@
                     </div>
                 </div>
 
-                <!-- Contact Form -->
-                <div class="contact-form-container">
+                <!-- Downloads Section -->
+                <div class="downloads-container">
                     <div class="card">
-                        <h2>Send a Message</h2>
-                        <form id="contact-form" class="contact-form">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" required class="form-input">
+                        <h2>{{ get_translation('downloads') }}</h2>
+                        <p class="downloads-description">
+                            {{ get_translation('downloads_description') }}
+                        </p>
+
+                        <div class="download-items">
+                            <div class="download-item">
+                                <div class="download-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                                    </svg>
+                                </div>
+                                <div class="download-details">
+                                    <h3>{{ get_translation('download_resume') }}</h3>
+                                    <a href="/static/downloads/Sebastian_Maierhofer_Lebenslauf.pdf"
+                                       target="_blank"
+                                       class="btn btn-secondary btn-sm">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                                            <path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"/>
+                                        </svg>
+                                        {{ get_translation('download_pdf') }}
+                                    </a>
+                                </div>
                             </div>
 
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required class="form-input">
-                            </div>
+                        </div>
 
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="text" id="subject" name="subject" required class="form-input">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="5" required class="form-input"></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary btn-full">
-                                Send Message
-                            </button>
-                        </form>
-
-                        <div id="form-status" class="form-status" style="display: none;"></div>
+                        <div class="downloads-footer">
+                            <p class="downloads-note">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                                    <path d="M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"/>
+                                </svg>
+                                {{ get_translation('downloads_note') }}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -168,123 +175,114 @@
     color: var(--accent-primary);
 }
 
-.contact-form {
-    margin-top: var(--space-lg);
+.downloads-description {
+    color: var(--text-secondary);
+    margin-bottom: var(--space-xl);
+    font-size: 1.1rem;
 }
 
-.form-group {
-    margin-bottom: var(--space-lg);
+.download-items {
+    margin-bottom: var(--space-xl);
 }
 
-.form-group label {
-    display: block;
-    color: var(--text-primary);
-    margin-bottom: var(--space-sm);
-    font-weight: 500;
-}
-
-.form-input {
-    width: 100%;
-    padding: var(--space-md);
+.download-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+    padding: var(--space-lg);
     background: var(--bg-tertiary);
-    border: 2px solid var(--border-color);
-    border-radius: var(--radius-md);
-    color: var(--text-primary);
-    font-family: var(--font-primary);
-    font-size: 1rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
     transition: var(--transition-normal);
 }
 
-.form-input:focus {
-    outline: none;
+.download-item:hover {
     border-color: var(--accent-primary);
-    box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.1);
+    background: rgba(233, 69, 96, 0.02);
 }
 
-.form-input::placeholder {
+.download-icon {
+    color: var(--accent-primary);
+    margin-top: var(--space-xs);
+    flex-shrink: 0;
+}
+
+.download-details {
+    flex: 1;
+}
+
+.download-details h3 {
+    color: var(--text-primary);
+    margin-bottom: var(--space-xs);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.download-details p {
     color: var(--text-secondary);
+    margin-bottom: var(--space-md);
+    font-size: 0.95rem;
 }
 
-.btn-full {
-    width: 100%;
+.btn-sm {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
 }
 
-.form-status {
-    margin-top: var(--space-lg);
-    padding: var(--space-md);
-    border-radius: var(--radius-md);
+.btn-secondary {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    background: var(--accent-primary);
+    color: var(--text-light);
+    border-color: var(--accent-primary);
+}
+
+.downloads-footer {
+    margin-top: var(--space-xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--border-color);
+}
+
+.downloads-note {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-}
-
-.form-status.success {
-    background: rgba(46, 204, 113, 0.2);
-    color: #2ecc71;
-    border: 1px solid rgba(46, 204, 113, 0.3);
-}
-
-.form-status.error {
-    background: rgba(231, 76, 60, 0.2);
-    color: #e74c3c;
-    border: 1px solid rgba(231, 76, 60, 0.3);
 }
 
 @media (max-width: 768px) {
     .contact-content {
         grid-template-columns: 1fr;
     }
-    
+
     .page-title {
         font-size: 2rem;
     }
-    
-    .contact-item {
+
+    .contact-item, .download-item {
         gap: var(--space-md);
+        padding: var(--space-md);
+    }
+
+    .download-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .download-icon {
+        margin-top: 0;
+        align-self: center;
     }
 }
 </style>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contact-form');
-    const status = document.getElementById('form-status');
-
-    form.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        const formData = new FormData(form);
-        const data = {
-            name: formData.get('name'),
-            email: formData.get('email'),
-            subject: formData.get('subject'),
-            message: formData.get('message')
-        };
-
-        try {
-            const response = await fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data)
-            });
-
-            const result = await response.json();
-
-            if (response.ok) {
-                status.className = 'form-status success';
-                status.textContent = result.message;
-                form.reset();
-            } else {
-                status.className = 'form-status error';
-                status.textContent = result.error || 'An error occurred. Please try again.';
-            }
-        } catch (error) {
-            status.className = 'form-status error';
-            status.textContent = 'Network error. Please try again later.';
-        }
-
-        status.style.display = 'block';
-    });
-});
-</script>
 {% endblock %}
