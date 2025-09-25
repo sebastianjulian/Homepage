@@ -86,7 +86,7 @@ PROJECTS_DATA = [
     },
     {
         'id': 'cs50-homepage',
-        'title': 'CS50 Homepage',
+        'title': 'CS50',
         'description': 'Completed Harvard University\'s comprehensive CS50: Introduction to Computer Science course, one of the most well-known introductions to computer science. This website serves as the final project.',
         'categories': ['Programming'],
         'status': 'Education',

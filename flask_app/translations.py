@@ -44,8 +44,9 @@ TRANSLATIONS = {
         'project_cansat_desc': 'European Space Agency (ESA) project to develop a satellite the size of a beverage can, launch it with a rocket, and safely return it to Earth while collecting atmospheric data.',
         'project_triton_title': 'Triton',
         'project_triton_desc': 'Complex system for autonomous navigation underwater that evolved from our CanSat project. Using physics, programming, electronics, and project management to explore marine robotics.',
-        'project_cs50_title': 'CS50 Homepage',
+        'project_cs50_title': 'CS50',
         'project_cs50_desc': 'Completed Harvard University\'s comprehensive CS50: Introduction to Computer Science course, one of the most well-known introductions to computer science. This website serves as the final project.',
+        'project_cs50_homepage_desc': 'Completed Harvard University\'s comprehensive CS50: Introduction to Computer Science course, covering fundamental programming concepts, algorithms, data structures, and web development using C, Python, SQL, HTML, CSS, and JavaScript. This personal homepage demonstrates the skills learned and serves as the final project.',
         'project_astrophoto_title': 'Astrophotography',
         'project_astrophoto_desc': 'Three-year journey from a beginner telescope setup to an automated system, capturing deep-sky objects like galaxies and nebulae that were initially beyond reach of basic equipment.',
 
@@ -266,8 +267,9 @@ Neben der Technik spielt der Sport eine große Rolle in meinem Leben: ob Radfahr
         'project_cansat_desc': 'Projekt der Europäischen Weltraumorganisation (ESA) zur Entwicklung eines Satelliten in der Größe einer Getränkedose, Start mit einer Rakete und sichere Rückkehr zur Erde unter Sammlung atmosphärischer Daten.',
         'project_triton_title': 'Triton',
         'project_triton_desc': 'Komplexes System für autonome Unterwassernavigation, das sich aus unserem CanSat-Projekt entwickelte. Nutzung von Physik, Programmierung, Elektronik und Projektmanagement zur Erforschung der Meeresrobotik.',
-        'project_cs50_title': 'CS50 Homepage',
+        'project_cs50_title': 'CS50',
         'project_cs50_desc': 'Abschluss von Harvard Universitys umfassendem CS50: Introduction to Computer Science Kurs, einer der bekanntesten und umfassendsten Einführungen in die Informatik. Diese Website dient als Abschlussprojekt.',
+        'project_cs50_homepage_desc': 'Abschluss von Harvard Universitys umfassendem CS50: Introduction to Computer Science Kurs, der grundlegende Programmierkonzepte, Algorithmen, Datenstrukturen und Webentwicklung mit C, Python, SQL, HTML, CSS und JavaScript abdeckt. Diese persönliche Homepage demonstriert die erlernten Fähigkeiten und dient als Abschlussprojekt.',
         'project_astrophoto_title': 'Astrophotographie',
         'project_astrophoto_desc': 'Dreijährige Reise von einer Anfänger-Teleskop-Einrichtung zu einem automatisierten System, das Deep-Sky-Objekte wie Galaxien und Nebel einfängt, die ursprünglich außerhalb der Reichweite grundlegender Ausrüstung lagen.',
 
@@ -488,8 +490,9 @@ Outre la technologie, le sport joue un rôle majeur dans ma vie : que ce soit le
         'project_cansat_desc': 'Projet de l’Agence Spatiale Européenne (ESA) pour développer un satellite de la taille d’une canette de boisson, le lancer avec une fusée et le ramener en sécurité sur Terre tout en collectant des données atmosphériques.',
         'project_triton_title': 'Triton',
         'project_triton_desc': 'Système complexe pour la navigation autonome sous-marine qui a évolué à partir de notre projet CanSat. Utilisation de la physique, programmation, électronique et gestion de projet pour explorer la robotique marine.',
-        'project_cs50_title': 'Page d\'accueil CS50',
-        'project_cs50_desc': 'Completion du cours complet CS50: Introduction to Computer Science de l’Université Harvard, l’une des introductions les plus connues et complètes à l’informatique. Ce site web sert de projet final.',
+        'project_cs50_title': 'CS50',
+        'project_cs50_desc': 'Completion du cours complet CS50: Introduction to Computer Science de Harvard, une des introductions les plus connues en informatique. Ce site web sert de projet final.',
+        'project_cs50_homepage_desc': 'Completion du cours CS50: Introduction to Computer Science de Harvard, couvrant les concepts de programmation, algorithmes, structures de donnees et developpement web avec C, Python, SQL, HTML, CSS et JavaScript. Cette page personnelle demontre les competences acquises et sert de projet final.',
         'project_astrophoto_title': 'Astrophotographie',
         'project_astrophoto_desc': 'Parcours de trois ans d’une configuration de télescope débutant à un système automatisé, capturant des objets du ciel profond comme les galaxies et nébuleuses qui étaient initialement hors de portée de l’équipement de base.',
 
