@@ -96,27 +96,55 @@
                     </div>
                 </div>
 
-                <!-- Row 2: Experiences and Engagement -->
+                <!-- Row 2: Competitions and Engagement -->
                 <div class="timeline-row">
-                    <!-- Experiences Timeline -->
+                    <!-- Competitions and Courses Timeline -->
                     <div class="timeline-section">
                         <div class="card">
-                            <h2>{{ get_translation('experiences') }}</h2>
+                            <h2>{{ get_translation('competitions_courses') }}</h2>
                             <div class="timeline">
                                 <div class="timeline-item completed">
                                     <div class="timeline-dot"></div>
                                     <div class="timeline-content">
-                                        <h4>{{ get_translation('competitions_courses') }}</h4>
-                                        <div class="experience-list">
-                                            <ul>
-                                                <li>CanSat Competition (2024)</li>
-                                                <li>Chemistry Olympiad (2022-2025)</li>
-                                                <li>DACH Seminar (2024)</li>
-                                                <li>CERN Courses (2022-2024)</li>
-                                                <li>VRVIS Internship (2022)</li>
-                                            </ul>
-                                        </div>
-                                        <span class="timeline-year">2022–2025</span>
+                                        <h4>CanSat Competition</h4>
+                                        <p class="timeline-degree">Satellite technology project with atmospheric measurements</p>
+                                        <span class="timeline-year">2024</span>
+                                        <span class="timeline-status status-completed">Completed</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item completed">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <h4>Chemistry Olympiad</h4>
+                                        <p class="timeline-degree">National chemistry competition with theoretical and practical components</p>
+                                        <span class="timeline-year">2022-2025</span>
+                                        <span class="timeline-status status-completed">Completed</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item completed">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <h4>DACH Seminar</h4>
+                                        <p class="timeline-degree">International physics seminar for talented students</p>
+                                        <span class="timeline-year">2024</span>
+                                        <span class="timeline-status status-completed">Completed</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item completed">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <h4>CERN Courses</h4>
+                                        <p class="timeline-degree">Online courses in particle physics and accelerator technology</p>
+                                        <span class="timeline-year">2022-2024</span>
+                                        <span class="timeline-status status-completed">Completed</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item completed">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <h4>VRVIS Internship</h4>
+                                        <p class="timeline-degree">Programming robotic systems and computer game development</p>
+                                        <span class="timeline-year">2022</span>
                                         <span class="timeline-status status-completed">Completed</span>
                                     </div>
                                 </div>
@@ -303,9 +331,22 @@
     grid-template-columns: 1fr 1fr;
     gap: var(--space-xl);
     margin-bottom: var(--space-2xl);
+    align-items: stretch;
 }
 
 .timeline-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-section .card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-section .timeline {
     flex: 1;
 }
 
