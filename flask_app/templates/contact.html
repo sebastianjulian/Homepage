@@ -85,34 +85,20 @@
 
                         <div class="download-items">
                             <div class="download-item">
-                                <div class="download-icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
-                                    </svg>
-                                </div>
                                 <div class="download-details">
-                                    <h3>{{ get_translation('download_resume') }}</h3>
                                     <a href="/static/downloads/Sebastian_Maierhofer_Lebenslauf.pdf"
                                        target="_blank"
-                                       class="btn btn-secondary btn-sm">
+                                       class="btn btn-primary">
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
                                             <path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"/>
                                         </svg>
-                                        {{ get_translation('download_pdf') }}
+                                        {{ get_translation('download_resume') }}
                                     </a>
                                 </div>
                             </div>
 
                         </div>
 
-                        <div class="downloads-footer">
-                            <p class="downloads-note">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
-                                    <path d="M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"/>
-                                </svg>
-                                {{ get_translation('downloads_note') }}
-                            </p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -187,8 +173,8 @@
 
 .download-item {
     display: flex;
-    align-items: flex-start;
-    gap: var(--space-lg);
+    align-items: center;
+    justify-content: center;
     margin-bottom: var(--space-xl);
     padding: var(--space-lg);
     background: var(--bg-tertiary);

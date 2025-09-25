@@ -224,7 +224,6 @@ TRANSLATIONS = {
         'download_skills': 'Technical Skills Matrix',
         'download_skills_desc': 'Detailed breakdown of programming languages and technologies',
         'download_pdf': 'Download PDF',
-        'downloads_note': 'All documents are in PDF format and regularly updated.',
     },
 
     'de': {
@@ -447,7 +446,6 @@ Neben der Technik spielt der Sport eine große Rolle in meinem Leben: ob Radfahr
         'download_skills': 'Technische Fähigkeiten-Matrix',
         'download_skills_desc': 'Detaillierte Aufschlüsselung von Programmiersprachen und Technologien',
         'download_pdf': 'PDF herunterladen',
-        'downloads_note': 'Alle Dokumente sind im PDF-Format und werden regelmäßig aktualisiert.',
     },
 
     'fr': {
