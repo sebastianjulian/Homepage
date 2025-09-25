@@ -11,16 +11,35 @@
             </div>
 
             <!-- Project Categories Filter -->
-            <div class="project-filters text-center" style="margin-bottom: var(--space-3xl);">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="Achievement">Achievement</button>
-                <button class="filter-btn" data-filter="Education">Education</button>
-                <button class="filter-btn" data-filter="Project">Project</button>
-                <button class="filter-btn" data-filter="Hobby">Hobby</button>
-                <button class="filter-btn" data-filter="Engineering">Engineering</button>
-                <button class="filter-btn" data-filter="Programming">Programming</button>
-                <button class="filter-btn" data-filter="Competition">Competition</button>
-                <button class="filter-btn" data-filter="Astrophotography">Astrophotography</button>
+            <div class="project-filters-container" style="margin-bottom: var(--space-3xl);">
+                <!-- Category 1: All Projects -->
+                <div class="filter-category">
+                    <div class="project-filters text-center">
+                        <button class="filter-btn active" data-filter="all">All Projects</button>
+                    </div>
+                </div>
+
+                <!-- Category 2: Types -->
+                <div class="filter-category">
+                    <h3 class="filter-category-title">Types</h3>
+                    <div class="project-filters text-center">
+                        <button class="filter-btn" data-filter="Achievement">Achievement</button>
+                        <button class="filter-btn" data-filter="Education">Education</button>
+                        <button class="filter-btn" data-filter="Project">Project</button>
+                        <button class="filter-btn" data-filter="Hobby">Hobby</button>
+                    </div>
+                </div>
+
+                <!-- Category 3: Fields -->
+                <div class="filter-category">
+                    <h3 class="filter-category-title">Fields</h3>
+                    <div class="project-filters text-center">
+                        <button class="filter-btn" data-filter="Engineering">Engineering</button>
+                        <button class="filter-btn" data-filter="Programming">Programming</button>
+                        <button class="filter-btn" data-filter="Competition">Competition</button>
+                        <button class="filter-btn" data-filter="Astrophotography">Astrophotography</button>
+                    </div>
+                </div>
             </div>
 
             <!-- Projects Grid -->
@@ -113,6 +132,28 @@
     color: var(--text-secondary);
     max-width: 700px;
     margin: 0 auto;
+}
+
+.project-filters-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2xl);
+}
+
+.filter-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.filter-category-title {
+    color: var(--accent-primary);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
 }
 
 .project-filters {
@@ -249,16 +290,24 @@
     .projects-detailed-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .page-title {
         font-size: 2rem;
     }
-    
+
+    .project-filters-container {
+        gap: var(--space-xl);
+    }
+
+    .filter-category-title {
+        font-size: 1rem;
+    }
+
     .project-filters {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .filter-btn {
         width: 200px;
     }
