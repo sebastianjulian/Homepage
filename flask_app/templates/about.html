@@ -44,7 +44,7 @@
                     <!-- Languages and Skills Timeline -->
                     <div class="timeline-section">
                         <div class="card">
-                            <h2>{{ get_translation('languages_skills') }}</h2>
+                            <h2>{{ get_translation('languages') }}</h2>
                             <div class="timeline">
                                 <div class="timeline-item ongoing">
                                     <div class="timeline-dot"></div>
@@ -70,25 +70,16 @@
                                         <h4>{{ get_translation('french_good') }}</h4>
                                         <p class="timeline-degree">Good conversational level</p>
                                         <span class="timeline-year">B1-B2</span>
-                                        <span class="timeline-status status-ongoing">Good</span>
+                                        <span class="timeline-status status-good">Good</span>
                                     </div>
                                 </div>
                                 <div class="timeline-item completed">
                                     <div class="timeline-dot"></div>
                                     <div class="timeline-content">
                                         <h4>{{ get_translation('latin_very_good') }}</h4>
-                                        <p class="timeline-degree">Großes Latinum (Great Latinum)</p>
+                                        <p class="timeline-degree">Academic level Latin (Großes Latinum)</p>
                                         <span class="timeline-year">School</span>
                                         <span class="timeline-status status-completed">Very Good</span>
-                                    </div>
-                                </div>
-                                <div class="timeline-item ongoing">
-                                    <div class="timeline-dot"></div>
-                                    <div class="timeline-content">
-                                        <h4>{{ get_translation('programming') }}</h4>
-                                        <p class="timeline-degree">Web & Software Development</p>
-                                        <span class="timeline-year">2018–</span>
-                                        <span class="timeline-status status-ongoing">Ongoing</span>
                                     </div>
                                 </div>
                             </div>
@@ -107,7 +98,7 @@
                                     <div class="timeline-dot"></div>
                                     <div class="timeline-content">
                                         <h4>CanSat Competition</h4>
-                                        <p class="timeline-degree">Satellite technology project with atmospheric measurements</p>
+                                        <p class="timeline-degree">Design and construction of a miniature satellite with integrated sensors, radio communications, and comprehensive data analysis</p>
                                         <span class="timeline-year">2024</span>
                                         <span class="timeline-status status-completed">Completed</span>
                                     </div>
@@ -116,7 +107,7 @@
                                     <div class="timeline-dot"></div>
                                     <div class="timeline-content">
                                         <h4>Chemistry Olympiad</h4>
-                                        <p class="timeline-degree">National chemistry competition with theoretical and practical components</p>
+                                        <p class="timeline-degree">Chemistry competition with theoretical and practical components</p>
                                         <span class="timeline-year">2022-2025</span>
                                         <span class="timeline-status status-completed">Completed</span>
                                     </div>
@@ -125,7 +116,7 @@
                                     <div class="timeline-dot"></div>
                                     <div class="timeline-content">
                                         <h4>DACH Seminar</h4>
-                                        <p class="timeline-degree">International physics seminar for talented students</p>
+                                        <p class="timeline-degree">International chemistry seminar for talented students</p>
                                         <span class="timeline-year">2024</span>
                                         <span class="timeline-status status-completed">Completed</span>
                                     </div>
@@ -155,7 +146,7 @@
                     <!-- Engagement and Hobbies Timeline -->
                     <div class="timeline-section">
                         <div class="card">
-                            <h2>{{ get_translation('engagement_hobbies') }}</h2>
+                            <h2>{{ get_translation('engagement_skills') }}</h2>
                             <div class="timeline">
                                 <div class="timeline-item ongoing">
                                     <div class="timeline-dot"></div>
@@ -167,6 +158,24 @@
                                                 <li>Astronomy evenings (knowledge transfer & image processing)</li>
                                             </ul>
                                         </div>
+                                        <span class="timeline-year">2020–</span>
+                                        <span class="timeline-status status-ongoing">Ongoing</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item ongoing">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <h4>{{ get_translation('programming') }}</h4>
+                                        <p class="timeline-degree">Software & Web Development</p>
+                                        <span class="timeline-year">2018–</span>
+                                        <span class="timeline-status status-ongoing">Ongoing</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item ongoing">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <h4>Projects</h4>
+                                        <p class="timeline-degree">Comprehensive project development combining engineering, programming, and design - including the autonomous submarine TRITON built from scratch</p>
                                         <span class="timeline-year">2020–</span>
                                         <span class="timeline-status status-ongoing">Ongoing</span>
                                     </div>
@@ -197,7 +206,7 @@
                                                 <li>Cooking</li>
                                             </ul>
                                         </div>
-                                        <span class="timeline-year">Ongoing</span>
+                                        <span class="timeline-year">2020–</span>
                                         <span class="timeline-status status-ongoing">Ongoing</span>
                                     </div>
                                 </div>
@@ -324,6 +333,11 @@
 .timeline-status.status-ongoing {
     background: rgba(52, 152, 219, 0.2);
     color: #3498db;
+}
+
+.timeline-status.status-good {
+    background: rgba(230, 126, 34, 0.2);
+    color: #e67e22;
 }
 
 .timeline-row {
