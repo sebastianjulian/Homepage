@@ -65,7 +65,7 @@
                         </div>
 
                         <h3 class="project-detailed-title">{{ project.title }}</h3>
-                        <p class="project-detailed-description">{{ project.description }}</p>
+                        <p class="project-detailed-description">{{ get_translation('project_' + project.id.replace('-', '_') + '_desc') }}</p>
 
                         <div class="project-detailed-actions">
                             {% if project.github_url %}
