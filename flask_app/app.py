@@ -41,7 +41,7 @@ PROJECTS_DATA = [
     {
         'id': 'wiener-schuelerliga',
         'title': 'Wiener Schülerliga',
-        'description': 'Student league management system and competition platform.',
+        'description': 'Our journey from crushing defeats with scorelines like 1:10 to ultimately winning the championship. A story of growth, structure, and determination that transformed underdogs into champions.',
         'categories': ['Sports', 'Competition'],
         'status': 'Achievement',
         'tech': ['Event Management', 'Organization', 'Sports'],
@@ -51,7 +51,7 @@ PROJECTS_DATA = [
     {
         'id': 'chemieolympiade',
         'title': 'Chemieolympiade',
-        'description': 'Chemistry olympiad participation and achievements.',
+        'description': 'Participation in the Chemistry Olympiad since fifth year of high school, combining theoretical knowledge with hands-on laboratory work to develop both understanding and experimental skills.',
         'categories': ['Chemistry', 'Competition'],
         'status': 'Achievement',
         'tech': ['Chemistry', 'Problem Solving'],
@@ -61,7 +61,7 @@ PROJECTS_DATA = [
     {
         'id': 'cansat',
         'title': 'CanSat',
-        'description': 'Satellite technology project with atmospheric measurements.',
+        'description': 'European Space Agency (ESA) project to develop a satellite the size of a beverage can, launch it with a rocket, and safely return it to Earth while collecting atmospheric data.',
         'categories': ['Engineering', 'Competition', 'Physics'],
         'status': 'Achievement',
         'tech': ['Raspberry Pi', 'Sensors', 'Data Analysis'],
@@ -71,7 +71,7 @@ PROJECTS_DATA = [
     {
         'id': 'triton',
         'title': 'TRITON',
-        'description': 'Submarine engineering project with innovative solutions.',
+        'description': 'Complex system for autonomous navigation underwater that evolved from our CanSat project. Using physics, programming, electronics, and project management to explore marine robotics.',
         'categories': ['Engineering', 'Programming', 'Project Management', 'CAD', 'Physics'],
         'status': 'Project',
         'tech': ['CAD', 'Simulation', 'Programming'],
@@ -81,7 +81,7 @@ PROJECTS_DATA = [
     {
         'id': 'cs50-homepage',
         'title': 'CS50 Homepage',
-        'description': 'Harvard CS50 final project - this very website.',
+        'description': 'Completed Harvard University\'s comprehensive CS50: Introduction to Computer Science course, one of the most well-known introductions to computer science. This website serves as the final project.',
         'categories': ['Programming'],
         'status': 'Education',
         'tech': ['Flask', 'Python', 'HTML5', 'CSS3'],
@@ -91,7 +91,7 @@ PROJECTS_DATA = [
     {
         'id': 'astrophotography',
         'title': 'Astrophotography',
-        'description': 'Deep space imaging and astronomical photography collection.',
+        'description': 'Three-year journey from a beginner telescope setup to an automated system, capturing deep-sky objects like galaxies and nebulae that were initially beyond reach of basic equipment.',
         'categories': ['Astrophotography', 'Event Management', 'Data Processing'],
         'status': 'Hobby',
         'tech': ['Telescope', 'Image Processing', 'Stacking', 'Event Management'],
