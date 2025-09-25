@@ -72,6 +72,11 @@ TRANSLATIONS = {
         'tag_engineering': 'Engineering',
         'tag_programming': 'Programming',
 
+        # Project Page Interface
+        'all_projects': 'All Projects',
+        'categories': 'Categories',
+        'tags': 'Tags',
+
         # Personal Info
         'personal_subtitle': 'Aspiring Engineer • Problem Solver',
         'personal_description': 'Recent graduate from Schottengymnasium, currently completing Zivildienst before pursuing Technical Physics. Passionate about engineering, programming, and astrophotography.',
@@ -304,6 +309,11 @@ Neben der Technik spielt der Sport eine große Rolle in meinem Leben: ob Radfahr
         'tag_engineering': 'Ingenieurswesen',
         'tag_programming': 'Programmierung',
 
+        # Project Page Interface
+        'all_projects': 'Alle Projekte',
+        'categories': 'Kategorien',
+        'tags': 'Tags',
+
         # Personal Info
         'personal_subtitle': 'Angehender Ingenieur • Problemlöser',
         'personal_description': 'Kürzlich Absolvent des Schottengymnasiums, derzeit Zivildienst vor dem Studium der Technischen Physik. Leidenschaftlich für Ingenieurswesen, Programmierung und Astrophotographie.',
@@ -535,6 +545,11 @@ Outre la technologie, le sport joue un rôle majeur dans ma vie : que ce soit le
         'tag_competition': 'Compétition',
         'tag_engineering': 'Ingénierie',
         'tag_programming': 'Programmation',
+
+        # Project Page Interface
+        'all_projects': 'Tous les Projets',
+        'categories': 'Catégories',
+        'tags': 'Tags',
 
         # Personal Info
         'personal_subtitle': 'Ingénieur aspirant • Résolveur de problèmes',
