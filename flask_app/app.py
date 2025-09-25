@@ -55,22 +55,12 @@ def set_language(lang_code):
 # Project data - same structure as React version
 PROJECTS_DATA = [
     {
-        'id': 'wiener-schuelerliga',
-        'title': 'Wiener Schülerliga',
-        'description': 'Our journey from crushing defeats with scorelines like 1:10 to ultimately winning the championship. A story of growth, structure, and determination that transformed underdogs into champions.',
-        'categories': ['Sports', 'Competition'],
-        'status': 'Achievement',
-        'tech': ['Event Management', 'Organization', 'Sports'],
-        'github_url': None,
-        'demo_url': None
-    },
-    {
-        'id': 'chemieolympiade',
-        'title': 'Chemieolympiade',
-        'description': 'Participation in the Chemistry Olympiad since fifth year of high school, combining theoretical knowledge with hands-on laboratory work to develop both understanding and experimental skills.',
-        'categories': ['Chemistry', 'Competition'],
-        'status': 'Achievement',
-        'tech': ['Chemistry', 'Problem Solving'],
+        'id': 'astrophotography',
+        'title': 'Astrophotography',
+        'description': 'Three-year journey from a beginner telescope setup to an automated system, capturing deep-sky objects like galaxies and nebulae that were initially beyond reach of basic equipment.',
+        'categories': ['Astrophotography', 'Event Management', 'Data Processing'],
+        'status': 'Hobby',
+        'tech': ['Telescope', 'Image Processing', 'Stacking', 'Event Management'],
         'github_url': None,
         'demo_url': None
     },
@@ -85,13 +75,13 @@ PROJECTS_DATA = [
         'demo_url': None
     },
     {
-        'id': 'triton',
-        'title': 'TRITON',
-        'description': 'Complex system for autonomous navigation underwater that evolved from our CanSat project. Using physics, programming, electronics, and project management to explore marine robotics.',
-        'categories': ['Engineering', 'Programming', 'Project Management', 'CAD', 'Physics'],
-        'status': 'Project',
-        'tech': ['CAD', 'Simulation', 'Programming'],
-        'github_url': 'https://github.com/sebastianjulian/triton',
+        'id': 'chemieolympiade',
+        'title': 'Chemieolympiade',
+        'description': 'Participation in the Chemistry Olympiad since fifth year of high school, combining theoretical knowledge with hands-on laboratory work to develop both understanding and experimental skills.',
+        'categories': ['Chemistry', 'Competition'],
+        'status': 'Achievement',
+        'tech': ['Chemistry', 'Problem Solving'],
+        'github_url': None,
         'demo_url': None
     },
     {
@@ -105,12 +95,22 @@ PROJECTS_DATA = [
         'demo_url': None
     },
     {
-        'id': 'astrophotography',
-        'title': 'Astrophotography',
-        'description': 'Three-year journey from a beginner telescope setup to an automated system, capturing deep-sky objects like galaxies and nebulae that were initially beyond reach of basic equipment.',
-        'categories': ['Astrophotography', 'Event Management', 'Data Processing'],
-        'status': 'Hobby',
-        'tech': ['Telescope', 'Image Processing', 'Stacking', 'Event Management'],
+        'id': 'triton',
+        'title': 'TRITON',
+        'description': 'Complex system for autonomous navigation underwater that evolved from our CanSat project. Using physics, programming, electronics, and project management to explore marine robotics.',
+        'categories': ['Engineering', 'Programming', 'Project Management', 'CAD', 'Physics'],
+        'status': 'Project',
+        'tech': ['CAD', 'Simulation', 'Programming'],
+        'github_url': 'https://github.com/sebastianjulian/triton',
+        'demo_url': None
+    },
+    {
+        'id': 'wiener-schuelerliga',
+        'title': 'Wiener Schülerliga',
+        'description': 'Our journey from crushing defeats with scorelines like 1:10 to ultimately winning the championship. A story of growth, structure, and determination that transformed underdogs into champions.',
+        'categories': ['Sports', 'Competition'],
+        'status': 'Achievement',
+        'tech': ['Event Management', 'Organization', 'Sports'],
         'github_url': None,
         'demo_url': None
     }
