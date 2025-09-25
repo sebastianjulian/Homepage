@@ -24,8 +24,8 @@
                                 <div class="timeline-item {{ edu.status }}">
                                     <div class="timeline-dot"></div>
                                     <div class="timeline-content">
-                                        <h4>{{ edu.institution }}</h4>
-                                        <p class="timeline-degree">{{ edu.degree }}</p>
+                                        <h4>{{ get_translation(edu.institution_key) if edu.institution_key else edu.institution }}</h4>
+                                        <p class="timeline-degree">{{ get_translation(edu.degree_key) if edu.degree_key else edu.degree }}</p>
                                         <span class="timeline-year">{{ edu.year }}</span>
                                     </div>
                                 </div>

@@ -78,7 +78,7 @@ TRANSLATIONS = {
         'interest_engineering': 'Engineering projects and problem-solving',
         'interest_physics': 'Physics and scientific research',
         'interest_additional': '[Placeholder for additional hobby]',
-        'education_timeline': 'Education Timeline',
+        'education_timeline': 'Education',
         'experiences': 'Experiences',
         'competitions_courses': 'Competitions and Courses',
         'competitions_courses_desc': 'Participation in extracurricular competitions such as the CanSat competition (mini-satellite construction), Chemistry Olympiad, and DACH seminar',
@@ -130,6 +130,15 @@ TRANSLATIONS = {
         'table_tennis': 'Table Tennis',
         'reading': 'Reading',
         'cooking': 'Cooking',
+
+        # Education entries
+        'technical_physics_studies': 'Technical Physics Studies',
+        'civil_service': 'Civil Service',
+        'paramedic_training': 'Paramedic Training',
+        'schottengymnasium': 'Schottengymnasium',
+        'matura': 'Matura',
+        'ves': 'VES',
+        'elementary_school': 'Elementary School',
 
         # Wiener Schülerliga Story
         'wiener_story_title': 'From Underdogs to Champions – Our Journey to Winning the Wiener Schülerliga',
@@ -278,7 +287,7 @@ Neben der Technik spielt der Sport eine große Rolle in meinem Leben: ob Radfahr
         'interest_engineering': 'Ingenieursprojekte und Problemlösung',
         'interest_physics': 'Physik und wissenschaftliche Forschung',
         'interest_additional': '[Platzhalter für weiteres Hobby]',
-        'education_timeline': 'Bildungsweg',
+        'education_timeline': 'Education',
         'experiences': 'Erfahrungen',
         'competitions_courses': 'Wettbewerbe und Kurse',
         'competitions_courses_desc': 'Teilnahme an außerschulischen Wettbewerben wie am CanSat-Wettbewerb (Mini-Satellitenbau), der Chemie-Olympiade und am DACH-Seminar',
@@ -330,6 +339,15 @@ Neben der Technik spielt der Sport eine große Rolle in meinem Leben: ob Radfahr
         'table_tennis': 'Tischtennis',
         'reading': 'Lesen',
         'cooking': 'Kochen',
+
+        # Education entries
+        'technical_physics_studies': 'Technische Physik Studium',
+        'civil_service': 'Zivildienst',
+        'paramedic_training': 'Sanitäterausbildung',
+        'schottengymnasium': 'Schottengymnasium',
+        'matura': 'Matura',
+        'ves': 'VES',
+        'elementary_school': 'Volksschule',
 
         # Wiener Schülerliga Story
         'wiener_story_title': 'Von Außenseitern zu Meistern – Unser Weg zum Gewinn der Wiener Schülerliga',
@@ -478,7 +496,7 @@ Outre la technologie, le sport joue un rôle majeur dans ma vie : que ce soit le
         'interest_engineering': 'Projets d\'ingénierie et résolution de problèmes',
         'interest_physics': 'Physique et recherche scientifique',
         'interest_additional': '[Placeholder pour loisir supplémentaire]',
-        'education_timeline': 'Parcours éducatif',
+        'education_timeline': 'Education',
         'experiences': 'Expériences',
         'competitions_courses': 'Concours et Cours',
         'competitions_courses_desc': 'Participation à des concours extrascolaires comme le concours CanSat (construction de mini-satellites), l\'Olympiade de Chimie et le séminaire DACH',
@@ -530,6 +548,15 @@ Outre la technologie, le sport joue un rôle majeur dans ma vie : que ce soit le
         'table_tennis': 'Tennis de Table',
         'reading': 'Lecture',
         'cooking': 'Cuisine',
+
+        # Education entries
+        'technical_physics_studies': 'Études de Physique Technique',
+        'civil_service': 'Service Civil',
+        'paramedic_training': 'Formation de Secouriste',
+        'schottengymnasium': 'Schottengymnasium',
+        'matura': 'Matura',
+        'ves': 'VES',
+        'elementary_school': 'École Primaire',
 
         # Wiener Schülerliga Story
         'wiener_story_title': 'D\'Outsiders à Champions – Notre Parcours vers la Victoire de la Ligue Scolaire Viennoise',

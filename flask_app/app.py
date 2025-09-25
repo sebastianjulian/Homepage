@@ -111,14 +111,26 @@ PERSONAL_INFO = {
     'github': 'sebastianjulian',
     'education': [
         {
-            'institution': 'Schottengymnasium',
-            'degree': 'Matura',
+            'institution_key': 'technical_physics_studies',
+            'degree_key': '',
+            'year': '2026+',
+            'status': 'planned'
+        },
+        {
+            'institution_key': 'civil_service',
+            'degree_key': 'paramedic_training',
+            'year': '2025-2026',
+            'status': 'ongoing'
+        },
+        {
+            'institution_key': 'schottengymnasium',
+            'degree_key': 'matura',
             'year': '2025',
             'status': 'completed'
         },
         {
-            'institution': 'VES',
-            'degree': 'Elementary School',
+            'institution_key': 'ves',
+            'degree_key': 'elementary_school',
             'year': '2017',
             'status': 'completed'
         }
